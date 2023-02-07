@@ -1,10 +1,9 @@
 const RSVP = () => {
     return (
-        <div className="RSVP">
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <h1 id="head">RSVP page</h1>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        </div>
+        <article className="RSVP">
+            <h1>RSVP page</h1>
+
+        </article>
     )
 }
 
