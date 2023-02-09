@@ -1,23 +1,22 @@
+import {Link} from "react-router-dom";
+//import {headerPic} from "./images/headerPic.jpg"
+
 const Navbar = () => {
     return (
         <header>
             <div className="row">
-                <a href="#main-menu" id="main-menu-toggle" className="toggle-menu" aria-label="Open main menu">
-                    <span aria-hidden="true">Open</span>
-                </a>
+                <img src={require("./images/B&K-10-smallest.jpg")} alt="Kevin and Bailey sitting on a short wall with flowers behind them"
+                     className="header-pic" />
             </div>
-            <nav id="main-menu" className="main-menu" aria-label="Main menu">
-                <a href="#main-menu-toggle" id="main-menu-close" className="menu-close" aria-label="Close main menu">
-                    <span aria-hidden="true">close</span>
-                </a>
+            <nav className="main-menu">
                 <ul>
-                    <li><a href="#">Info</a></li>
-                    <li><a href="#">Location</a></li>
-                    <li><a href="#">Share Photos</a></li>
-                    <li><a href="#">RSVP</a></li>
+                    <li><Link to={'/RSVP'}>RSVP</Link></li>
+                    <li><Link to={'/Info'}>Info</Link></li>
+                    <li><Link to={'/Location'}>Location</Link></li>
+                    <li><Link to={'/'}>Home</Link></li>
+                    <li><Link to={'/Share'}>Share Pics</Link></li>
                 </ul>
             </nav>
-            <a href="#main-menu-toggle" className="backdrop" tabIndex="-1" hidden></a>
         </header>
     )
 }
