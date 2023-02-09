@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div className={"custom-footer"}>
+        <footer className={"custom-footer"}>
             <author>
                 <h3>Bride and Groom Contact:</h3>
                 <ul>
@@ -24,7 +24,7 @@ const Footer = () => {
                         Severn, MD 21144</a>
                 </address>
             </author>
-        </div>
+        </footer>
     )
 }
 
