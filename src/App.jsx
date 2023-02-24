@@ -9,9 +9,15 @@ import Location from "./Location";
 import Share from "./Share";
 import Login from "./Login";
 import useGuest from "./useGuest";
+import setJPTheme from "./setJPTheme";
+import Admin from "./Admin";
 
 function App() {
     const {username, setUsername} = useGuest();
+
+    if (localStorage.getItem('stylePref') === 'jurassic-park') {
+        setJPTheme()
+    }
 
     if(!username) {
         return <Login setUser={setUsername} />
@@ -22,23 +28,19 @@ function App() {
             <header>
                 <Navbar />
             </header>
-            <body>
             <Routes>
                 <Route path={'/RSVP'} element={<RSVP />} />
                 <Route path={'/'} element={<Home />} />
                 <Route path={'/Location'} element={<Location />} />
                 <Route path={'/Share'} element={<Share />} />
                 <Route path={'/Info'} element={<Info />} />
+                <Route path={'/Admin'} element={<Admin />} />
             </Routes>
-            </body>
             <footer>
                 <Footer />
             </footer>
           </div>
       </BrowserRouter>
-
-
-
   );
 }
 
