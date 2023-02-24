@@ -1,7 +1,18 @@
 import {Link} from "react-router-dom";
+import setJPTheme from "./setJPTheme";
+import setNormalTheme from "./setNormalTheme";
 //import {headerPic} from "./images/headerPic.jpg"
 
+
 const Navbar = () => {
+    const toggleTheme = () => {
+        if (localStorage.getItem('stylePref') === 'jurassic-park') {
+            setNormalTheme()
+        } else {
+            setJPTheme()
+        }
+    }
+
     return (
         <header>
             <div className="row">
@@ -15,6 +26,7 @@ const Navbar = () => {
                     <li><Link to={'/Location'}>Location</Link></li>
                     <li><Link to={'/'}>Home</Link></li>
                     <li><Link to={'/Share'}>Share Pics</Link></li>
+                    <li ><a onClick={toggleTheme}>🦖</a></li>
                 </ul>
             </nav>
         </header>
