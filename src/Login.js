@@ -9,8 +9,17 @@ async function getUserInfo(username) {
         .then(data => data.json())
 }
 
+function invalidMessage(state) {
+    state(true)
+    setTimeout(() => {
+        state(false)
+    }, 2000)
+
+}
+
 export default function Login({ setUser }) {
     const [username, setUserName] = useState("");
+    const [invalid, setInvalid] = useState(false);
 
     const validateForm = () => {
         return username.length > 0;
@@ -19,10 +28,13 @@ export default function Login({ setUser }) {
     const handleSubmit = async(e) => {
         e.preventDefault();
         const user = await getUserInfo(username);
-        setUser(user)
-        const theme = e.target.theme.value
-        if (theme === 'jurassic-park') {
-            setJPTheme();
+        if (user[0]?.username) {
+            setUser(user)
+            if (e.target.theme.value === 'jurassic-park') {
+                setJPTheme();
+            }
+        } else {
+            invalidMessage(setInvalid)
         }
     }
 
@@ -30,11 +42,11 @@ export default function Login({ setUser }) {
         <div className="login">
             <h1>Log In</h1>
             <h2>Please provide the username from your invite.</h2>
-            <p>It can be for either you or your partner and is not case sensitive.</p>
+            <p><span>It can be for either you or your partner and is not case sensitive.</span></p>
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <label>
-                        <p>Username</p>
+                        <p>Username:</p>
                         <input
                             autoFocus
                             type="username"
@@ -42,6 +54,11 @@ export default function Login({ setUser }) {
                             onChange={(e) => setUserName(e.target.value.toLowerCase())}
                         />
                     </label>
+                    { invalid &&
+                    <p>
+                        Invalid username
+                    </p>
+                    }
                 </fieldset>
                 <fieldset>
                     <label>
