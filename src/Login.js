@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import Form from "react-bootstrap/Form"
-import Button from "react-bootstrap/Button"
 import PropTypes from "prop-types";
+import setJPTheme from "./setJPTheme";
 
 async function getUserInfo(username) {
     return fetch(`http://localhost:4000/guest/?username=${username}`, {
@@ -21,29 +20,38 @@ export default function Login({ setUser }) {
         e.preventDefault();
         const user = await getUserInfo(username);
         setUser(user)
+        const theme = e.target.theme.value
+        if (theme === 'jurassic-park') {
+            setJPTheme();
+        }
     }
 
     return (
-        <div className="Login">
-            <h1>Please Log In</h1>
-            <h2>Please provide the username from your invite.
-            It can be for either you or your partner and case
-                does not matter.</h2>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group size="lg" controlId="email">
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control
-                        autoFocus
-                        type="username"
-                        value={username}
-                        onChange={(e) => setUserName(e.target.value.toLowerCase())}
+        <div className="login">
+            <h1>Log In</h1>
+            <h2>Please provide the username from your invite.</h2>
+            <p>It can be for either you or your partner and is not case sensitive.</p>
+            <form onSubmit={handleSubmit}>
+                <fieldset>
+                    <label>
+                        <p>Username</p>
+                        <input
+                            autoFocus
+                            type="username"
+                            value={username}
+                            onChange={(e) => setUserName(e.target.value.toLowerCase())}
                         />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label>What website theme would you like?</Form.Label>
-                </Form.Group>
-                <Button block size="lg" type="submit" disabled={!validateForm()}>Login</Button>
-            </Form>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label>
+                        <p>What website theme would you like?</p>
+                        <input type={"radio"} value={"traditional"} name={"theme"}/>Traditional
+                        <input type={"radio"} value={"jurassic-park"} name={"theme"}/>Jurassic Park
+                    </label>
+                </fieldset>
+                <button type="submit" disabled={!validateForm()}>Login</button>
+            </form>
         </div>
     );
 }
