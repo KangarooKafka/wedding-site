@@ -11,6 +11,7 @@ import Login from "./Login";
 import useGuest from "./useGuest";
 import setJPTheme from "./setJPTheme";
 import Admin from "./Admin";
+import Manage from "./Manage";
 
 function App() {
     const {username, setUsername} = useGuest();
@@ -34,7 +35,8 @@ function App() {
                 <Route path={'/Location'} element={<Location />} />
                 <Route path={'/Share'} element={<Share />} />
                 <Route path={'/Info'} element={<Info />} />
-                <Route path={'/Admin'} element={<Admin />} />
+                <Route path={'/Admin/RSVPED'} element={<Admin />} />
+                <Route path={'/Admin/manage'} element={<Manage />} />
             </Routes>
             <footer>
                 <Footer />
