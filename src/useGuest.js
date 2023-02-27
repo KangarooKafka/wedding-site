@@ -3,8 +3,6 @@ import { useState } from "react";
 export default function useGuest() {
     const getUser = () => {
         const tokenString = localStorage.getItem('username');
-        console.log(tokenString)
-        //const userToken = JSON.parse(tokenString);
         return tokenString;
     };
 
@@ -17,6 +15,7 @@ export default function useGuest() {
         localStorage.setItem('children', userToken[0].children);
         localStorage.setItem('rsvped', userToken[0].rsvped);
         localStorage.setItem('stylePref', userToken[0].stylePref)
+        localStorage.setItem('userID', userToken[0]._id)
         setUsername(userToken[0].username[0])
     };
 
