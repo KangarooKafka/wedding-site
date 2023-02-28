@@ -1,16 +1,16 @@
-const Home = () => {
-    let greeting;
+export default function Home() {
+    // Get the first name of the users
     const personOne = localStorage.getItem('p1FirstName');
     const personTwo = localStorage.getItem('p2FirstName');
-    if (personTwo.length > 0) {
-        greeting = `${personOne} & ${personTwo}`
-    } else {
-        greeting = `${personOne}`
-    }
 
     return (
         <article className="home">
-            <h1>Welcome {greeting}!</h1>
+            {/* Display custom welcome message, depending on if there are one or two guests */}
+            {personTwo.length > 0 ? (
+                <h1>Welcome {personOne} & {personTwo}!</h1>
+            ) : (
+                <h1>Welcome {personOne}!</h1>
+            )}
             <section>
             <p>Our whole lives, we always watched people plan
                 expensive destination weddings that were a pain for
@@ -71,5 +71,3 @@ const Home = () => {
         </article>
     )
 }
-
-export default Home;
