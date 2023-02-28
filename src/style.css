@@ -164,6 +164,10 @@ dl {
     font-family: var(--body-font);
 }
 
+button:disabled {
+    background-color: lightgray;
+}
+
 /* RSVP */
 
 .RSVP input {
@@ -234,8 +238,8 @@ dl {
     border: solid var(--nav-and-foot);
 }
 
-.guest {
-
+.guest span{
+    font-weight: bold;
 }
 
 .admin ul {
@@ -247,6 +251,35 @@ dl {
     font-size: var(--h4);
     font-family: var(--body-font);
     font-weight: normal;
+}
+
+.form-boxes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 5%;
+}
+
+.form-boxes label p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.form-boxes label:first-child,
+.form-boxes label:last-child {
+    flex-basis: 100%;
+}
+
+.admin form {
+    text-align: center;
+}
+
+.add-header {
+    height: 80px;
 }
 
 /* Nav bar */
@@ -354,6 +387,10 @@ nav a:hover, a:focus {
 
 .custom-footer a:hover {
     color: var(--hover-color);
+}
+
+.custom-footer p {
+    padding: 0;
 }
 
 /* Tablet view */
