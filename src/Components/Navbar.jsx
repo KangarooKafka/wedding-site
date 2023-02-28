@@ -1,10 +1,10 @@
 import {Link} from "react-router-dom";
-import setJPTheme from "./setJPTheme";
-import setNormalTheme from "./setNormalTheme";
-//import {headerPic} from "./images/headerPic.jpg"
+import setJPTheme from "../Functions/setJPTheme";
+import setNormalTheme from "../Functions/setNormalTheme";
 
 
-const Navbar = () => {
+export default function Navbar() {
+    // Toggles theme based on navbar theme button
     const toggleTheme = () => {
         if (localStorage.getItem('stylePref') === 'jurassic-park') {
             setNormalTheme()
@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <header>
             <div className="row">
-                <img src={require("./images/B&K-10-smallest.jpg")} alt="Kevin and Bailey sitting on a short wall with flowers behind them"
+                <img src={require("../images/B&K-10-smallest.jpg")} alt="Kevin and Bailey sitting on a short wall with flowers behind them"
                      className="header-pic" />
             </div>
             <nav className="main-menu">
@@ -26,11 +26,9 @@ const Navbar = () => {
                     <li><Link to={'/Location'}>Location</Link></li>
                     <li><Link to={'/'}>Home</Link></li>
                     <li><Link to={'/Share'}>Share Pics</Link></li>
-                    <li ><a onClick={toggleTheme}>🦖</a></li>
+                    <li ><button onClick={toggleTheme}>🦖</button></li>
                 </ul>
             </nav>
         </header>
     )
 }
-
-export default Navbar;
