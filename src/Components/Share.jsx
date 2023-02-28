@@ -1,4 +1,4 @@
-const Share = () => {
+export default function Share() {
     return (
         <article className="share">
             <h1>Share Pictures</h1>
@@ -12,5 +12,3 @@ const Share = () => {
         </article>
     )
 }
-
-export default Share;
