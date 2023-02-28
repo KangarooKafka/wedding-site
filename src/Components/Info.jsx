@@ -1,10 +1,10 @@
-import {ReactComponent as SignPost} from "./images/signs-post-solid.svg";
-import {ReactComponent as Suitcase} from "./images/suitcase-solid.svg";
-import {ReactComponent as Clipboard} from "./images/clipboard-list-solid.svg";
-import {ReactComponent as Question} from "./images/circle-question-solid.svg";
-import {ReactComponent as Gift} from "./images/gift-solid.svg";
+import {ReactComponent as SignPost} from "../images/signs-post-solid.svg";
+import {ReactComponent as Suitcase} from "../images/suitcase-solid.svg";
+import {ReactComponent as Clipboard} from "../images/clipboard-list-solid.svg";
+import {ReactComponent as Question} from "../images/circle-question-solid.svg";
+import {ReactComponent as Gift} from "../images/gift-solid.svg";
 
-const Info = () => {
+export default function Info() {
     return (
         <article className="info">
             <h1>Info</h1>
@@ -117,5 +117,3 @@ const Info = () => {
         </article>
     )
 }
-
-export default Info;
