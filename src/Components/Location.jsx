@@ -1,10 +1,8 @@
-import {ReactComponent as SignPost} from "./images/signs-post-solid.svg";
-import {ReactComponent as Suitcase} from "./images/suitcase-solid.svg";
-import {ReactComponent as Clipboard} from "./images/clipboard-list-solid.svg";
-import {ReactComponent as Question} from "./images/circle-question-solid.svg";
-import {ReactComponent as Gift} from "./images/gift-solid.svg";
+import {ReactComponent as SignPost} from "../images/signs-post-solid.svg";
+import {ReactComponent as Suitcase} from "../images/suitcase-solid.svg";
+import {ReactComponent as Clipboard} from "../images/clipboard-list-solid.svg";
 
-const Location = () => {
+export default function Location() {
     return (
         <article className="location">
             <h1>The Location</h1>
@@ -38,7 +36,7 @@ const Location = () => {
                             <li>Private theater with luxury seats for 18 people and a luxury floor for everyone else</li>
                             <li>Heated pool and hot tub (heated pool Xtreme)</li>
                             <li>Sauna (if you want to experience hot water without being in a tub)</li>
-                            <li>Pickleball courts</li>
+                            <li>Pickle ball courts</li>
                             <li>Outdoor playground</li>
                             <li>A wide range of TVs and tables for boardgames</li>
                         </ul>
@@ -71,5 +69,3 @@ const Location = () => {
         </article>
     )
 }
-
-export default Location;
