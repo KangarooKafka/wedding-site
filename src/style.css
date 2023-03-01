@@ -27,11 +27,19 @@ html {
     --body-background: #fff;
     --text: #495048;
 
-    --header-font:'Poiret One', cursive;
-    --body-font:'Lato', sans-serif;
+    --font-var: 'Poiret One';
+    --font-var2: 'Lato';
 
-    --background-left: url(images/zion-background.jpeg);
-    --background-right: url(images/zion-background.jpeg);
+    --header-font: var(--font-var), cursive;
+    --body-font: var(--font-var2), sans-serif;
+
+    /* images/zion-1.jpeg */
+    /* images/zion-2.webp */
+    --img-url: url(images/zion-5.jpeg);
+    --img-url2: url(images/jp-1.webp);
+
+    --background-left: var(--img-url);
+    --background-right: var(--img-url);
 
 }
 
@@ -72,11 +80,13 @@ h3 {
 h4 {
     font-size: var(--h4);
     font-weight: normal;
+    font-family: var(--body-font);
 }
 
 h5 {
     font-size: var(--h5);
     font-weight: normal;
+    font-family: var(--body-font);
 }
 
 p {
@@ -341,6 +351,12 @@ nav a:hover, a:focus {
     color: #C57C78;
 }
 
+nav button {
+    background-color: var(--nav-and-foot);
+    border: none;
+    font-size: var(--h5);
+}
+
 
 /* Footer */
 .custom-footer {
@@ -425,6 +441,7 @@ nav a:hover, a:focus {
     /* Background */
     .background {
         background-image: var(--background-left), var(--background-right);
+        background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: left, right;
