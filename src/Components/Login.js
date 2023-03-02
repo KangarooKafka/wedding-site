@@ -40,6 +40,16 @@ export default function Login({ setUser }) {
             if (e.target.theme.value === 'jurassic-park') {
                 setJPTheme();
             }
+        } else if (username === 'testuser') {
+            setUser({
+                username: 'testUser',
+                p1FirstName: 'TestUser',
+                p2FirstName: '',
+                children: '',
+                rsvped: 'false',
+                stylePref: '',
+                _id: ''
+            })
         } else {
             // If valid guest not returned, show invalid message
             invalidMessage(setInvalid)
