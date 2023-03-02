@@ -4,7 +4,7 @@ import setJPTheme from "../Functions/setJPTheme";
 
 // Uses the username to get the guest info from the API
 async function getUserInfo(username) {
-    return fetch(`http://localhost:4000/guest/?username=${username}`, {
+    return fetch(`/api/guest/?username=${username}`, {
         method: 'GET'
     })
         .then(data => data.json())
