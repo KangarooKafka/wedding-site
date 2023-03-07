@@ -16,7 +16,7 @@ const formData = {
 
 // Makes API request to update the guest data
 async function updateGuest(id, form) {
-    return fetch(`http://localhost:4000/guest/${id}`, {
+    return fetch(`/api/guest/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)

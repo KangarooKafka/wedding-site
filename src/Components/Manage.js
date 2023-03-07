@@ -3,7 +3,7 @@ import GuestListing from "./GuestListing";
 
 // Makes API call to get all guests
 async function getAllGuests() {
-    return await fetch(`http://localhost:4000/guest`, {
+    return await fetch(`/api/guest`, {
         method: 'GET'
     })
         .then(data => data.json())
@@ -11,7 +11,7 @@ async function getAllGuests() {
 
 // Makes API call to add a new guest
 async function addGuest() {
-    return fetch(`http://localhost:4000/guest`, {
+    return fetch(`/api/guest`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
