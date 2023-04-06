@@ -8,10 +8,16 @@ html {
     box-sizing: inherit;
 }
 
+@font-face {
+    font-family: "JP";
+    src: local("JP-Font"), url(Fonts/jpFont.ttf) format("truetype");
+}
+
 /* Custom Properties */
 :root {
-    --font-master: 1.2rem;
+    --font-master: 1.0rem;
     --font-scaling: 1.2;
+    --header-weight: bold;
     --h1: calc(var(--h2) * var(--font-scaling));
     --h2: calc(var(--h3) * var(--font-scaling));
     --h3: calc(var(--h4) * var(--font-scaling));
@@ -92,16 +98,19 @@ h5 {
 p {
     color: var(--text);
     font-family: var(--body-font);
+    font-size: var(--font-master);
     line-height: 1.5;
 }
 
 .location li,
 .home li,
-.info li {
+.info li,
+dt, dd{
     text-decoration: none;
     list-style-type: "🌷 ";
     color: var(--text);
     font-family: var(--body-font);
+    font-size: var(--font-master);
 }
 
 /* General Content Pages */
@@ -113,6 +122,10 @@ fieldset {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+}
+
+fieldset legend h2 {
+    font-weight: var(--header-weight);
 }
 
 section {
@@ -321,7 +334,6 @@ header {
     border-bottom: 1px solid var(--nav-and-foot-text);
     padding: 0.3rem 0;
     font-family: var(--header-font);
-    font-weight: bold;
 }
 
 .main-menu ul {
@@ -341,6 +353,7 @@ header {
     color: var(--nav-and-foot-text);
     font-size: var(--h4);
     display: block;
+    font-weight: var(--header-weight);
 }
 
 nav li a:not(:last-child)::after {

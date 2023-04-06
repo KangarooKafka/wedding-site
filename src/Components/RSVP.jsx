@@ -1,4 +1,5 @@
 import { useState } from "react";
+import urlUtil from "../Common/utils/urlUtil";
 
 // Blank object for form data
 const formData = {
@@ -16,7 +17,7 @@ const formData = {
 
 // Makes API request to update the guest data
 async function updateGuest(id, form) {
-    return fetch(`/api/guest/${id}`, {
+    return fetch(`${urlUtil}/api/guest/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)

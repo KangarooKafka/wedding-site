@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
 import GuestListing from "./GuestListing";
+import urlUtil from "../Common/utils/urlUtil";
 
 // Makes API call to get all guests
 async function getAllGuests() {
-    return await fetch(`/api/guest`, {
+    return await fetch(`${urlUtil}/api/guest`, {
         method: 'GET'
     })
         .then(data => data.json())
@@ -11,7 +12,7 @@ async function getAllGuests() {
 
 // Makes API call to add a new guest
 async function addGuest() {
-    return fetch(`/api/guest`, {
+    return fetch(`${urlUtil}/api/guest`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
