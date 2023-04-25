@@ -119,6 +119,9 @@ export default function RSVP() {
                 {rsvped === 'true' ? (
                 <div className={'rsvped-message'}>
                     <p>Thank you for RSVPing!</p>
+                    <p>When we have enough RSVPs to figure out lodging, we will reach out
+                    to you and let you know if there is space at the Villa or if you will
+                    need to be booking a hotel.</p>
                     <p>If you need to make a change, please <a href={'mailto:kevindarke@gmail.com'}>contact us directly</a>.</p>
                 </div>
                 ) : (

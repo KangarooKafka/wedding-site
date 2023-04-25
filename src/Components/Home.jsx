@@ -12,61 +12,74 @@ export default function Home() {
                 <h1>Welcome {personOne}!</h1>
             )}
             <section>
-            <p>Our whole lives, we always watched people plan
-                expensive destination weddings that were a pain for
-                all their guests, and we said to ourselves,
-                “we’ll never do that”.</p>
-                <p>Well, here we are.</p>
-            <p>So what happened? Why a destination wedding at Zion National Park? In 2021 We took a road
-                trip across the American West to visit
-                National Parks, and Zion immediately became our
-                most favorite place in the world, and we knew
-                immediately it’s where we wanted to get married.</p>
+                <p>Welcome to our wedding website! We're very excited to be
+                    getting married and to get to share this experience
+                    with you at Zion National Park!</p>
+                <p>On this site you'll find all the information you need
+                    about the wedding, as well as be able to RSVP and send
+                    us pictures from the ceremony.</p>
+                <p>Kevin actually made this website from scratch and he
+                    has no previous experience making websites (and also
+                    feels weird writing in the 3rd person), so if something
+                    isn't working right, then just let him know.</p>
+                <p>PS, the website's theming options are best experienced
+                    on a desktop.</p>
+            </section>
+            <section>
+                <fieldset><legend><h2>Why Zion?</h2></legend></fieldset>
+                <p>We know what you're thinking, "why in the blue blazes
+                    are you getting married in Utah?"</p>
+                <p>Well, that's a valid question. Honestly, we always hated
+                    the idea of destination weddings since it's a huge ask and
+                    headache for our guests. But, here we are, so sorry about that!</p>
+                <p>So what happened? Well in 2021 we took a road trip of the American
+                    West, and when we visited Zion, it was so breathtakingly beautiful that
+                    we both immediately knew it's where we wanted to get married. Kevin
+                    started shopping for engagement rings as soon as we got home.</p>
             </section>
             <section>
                 <fieldset><legend><h2>The Plan</h2></legend></fieldset>
-            <p>Since you’re already coming all the way out to
-                southern Utah, it seemed like such a waste to just
-                come out for a day then send everyone home. Instead,
-                what we’ve done is rented a 12,000 square foot villa
-                for the five days around our wedding for everyone to
-                stay in. Not only will you be coming for the wedding,
-                but also hopefully having a fun multi-day vacation at
-                a super cool place. For more information on the
-                Location tab.</p>
+                <p>We understand that traveling all the way out to Utah is
+                    a tall ask, so to make it worth the trip we've rented
+                    out a 12,000 square foot villa and 15 private acres for
+                    the 5 days around our wedding for people to relax and
+                    have fun at.</p>
+                <p>As of right now, we have more people invited to the wedding
+                    than beds available at the villa, so we cannot guarantee everyone
+                    a place to sleep there until everyone RSVPs. So you may need
+                    to book a hotel to sleep at, but you can still hang out at the Villa
+                    and enjoy the amenities during the day. For more information on the
+                    Villa, please check out the Locations tab.</p>
+                <p>The sooner everyone RSVPs, the sooner we'll be able to let people know
+                    if they need to get a hotel or not. So if you know you definitely will or
+                    will not be going, we ask that you please RSVP as soon as possible.</p>
             </section>
             <section>
-                <fieldset><legend><h2>Cost</h2></legend></fieldset>
-            <p>We have guests coming from all ends of the financial
-                spectrum and want to make sure as many people can
-                come as possible. In fact, the other reason for
-                getting the Villa was so that people wouldn’t have
-                to worry about finding a hotel. As such, we are not
-                going to be requiring anyone chip in for their stay
-                at the Villa, or for any of the food we will be
-                providing for the length of the stay. That being said,
-                my lottery numbers keep being duds and this whole
-                endeavor is very expensive. If you feel you can,
-                it would be greatly appreciated if you chipped in
-                for the Villa and food. If not, really don’t worry
-                about it, we’re just glad to have you there!</p>
-            </section>
-            <section>
-                <fieldset><legend><h2>Important</h2></legend></fieldset>
-            <p>The Villa does have a limited number of beds.
-                It’s a lot, but it’s still limited. As of right now,
-                we cannot guarantee that there is going to be enough
-                space for everyone (at least to sleep).</p>
-            <p>Once everyone RSVPs, we’ll be able to put together the
-                sleeping arrangements and figure out if we have enough
-                beds. At that point, we will email you and let you know
-                if there is space in the Villa, or if you’ll be needing
-                to rent a hotel room.</p>
-            <p>That means the sooner you can RSVP, the easier it will
-                be for us to figure everything out. Obviously there
-                are a lot of logistics that you need to look at, but
-                if you know you definitely will or will not be going,
-                please let us know as soon as possible!</p>
+                <fieldset><legend><h2>Costs</h2></legend></fieldset>
+                <p>It's hard to estimate prices this far out, but these
+                    are our best guesses so you have an idea of how much
+                    it might cost.</p>
+                <dl>
+                    <dt>Airfare</dt>
+                    <dd>Around $300-$400 per person, round trip</dd>
+                    <dt>Rental Car</dt>
+                    <dd>Around $50 a day</dd>
+                    <dt>Lodging</dt>
+                    <dd>It depends on how close you want to be and how nice of a place
+                        you want. You can get an AirBnB 30 minutes away for around $120 a night,
+                        or a nice Hotel close by for $300+ a night.</dd>
+                    <dd>If you stay at the Villa, there is no set cost for you. The price
+                        of lodging is one of the reasons we got it to begin with. It is very
+                        expensive for us however, so if you're staying at the Villa and feel
+                        financially comfortable enough to chip in to the cost, that would be
+                        highly appreciated.</dd>
+                    <dt>Food</dt>
+                    <dd>We will be doing our best to feed everyone at the Villa. Again,
+                        you do not need to pay us anything for this, but if you want to chip
+                        in, it would be appreciated.</dd>
+                </dl>
+                <p>We would also suggest talking to people you know who are also going to
+                    coordinate sharing things like rental cars.</p>
             </section>
         </article>
     )

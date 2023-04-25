@@ -53,7 +53,7 @@ html {
 .background {
     padding: 0;
     margin: 0;
-    background-color: #394008;
+    background-color: var(--nav-and-foot);
 }
 
 h1 {
@@ -141,11 +141,7 @@ article {
     margin: 0 auto;
 }
 
-section:nth-child(even){
-    background-color: var(--body-background);
-}
-
-section:nth-child(odd){
+section {
     background-color: var(--body-background);
 }
 
@@ -185,6 +181,7 @@ a:hover {
 dl {
     color: var(--text);
     font-family: var(--body-font);
+    padding: 1em;
 }
 
 button:disabled {
@@ -214,6 +211,25 @@ button:disabled {
 
 .rsvped-message p {
     text-align: center;
+}
+
+/* Info */
+
+.info button {
+    color: var(--text);
+    background-color: var(--body-background);
+    border: none;
+    font-size: var(--h5);
+    padding: 1em;
+    text-align: left;
+}
+
+.info .szh-accordion > div:not(:first-child) {
+    border-top: 1px solid var(--nav-and-foot);
+}
+
+.info .szh-accordion__item-content {
+    padding-left: 3em;
 }
 
 /* Login */

@@ -6,12 +6,12 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import RSVP from "./RSVP";
 import Info from "./Info";
 import Location from "./Location";
-import Share from "./Share";
 import Login from "./Login";
 import useGuest from "../Functions/useGuest";
 import setJPTheme from "../Functions/setJPTheme";
 import Admin from "./Admin";
 import Manage from "./Manage";
+import ErrorBoundary from "./ErrorBoundary";
 
 export default function App() {
     // Hook for username of guest
@@ -28,7 +28,8 @@ export default function App() {
     }
 
     return (
-      <BrowserRouter>
+      <ErrorBoundary>
+        <BrowserRouter>
           <div className="background">
             <header>
                 <Navbar />
@@ -37,7 +38,6 @@ export default function App() {
                 <Route path={'/RSVP'} element={<RSVP />} />
                 <Route path={'/'} element={<Home />} />
                 <Route path={'/Location'} element={<Location />} />
-                <Route path={'/Share'} element={<Share />} />
                 <Route path={'/Info'} element={<Info />} />
                 <Route path={'/Admin/RSVPED'} element={<Admin />} />
                 <Route path={'/Admin/manage'} element={<Manage />} />
@@ -46,6 +46,7 @@ export default function App() {
                 <Footer />
             </footer>
           </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </ErrorBoundary>
   );
 }
