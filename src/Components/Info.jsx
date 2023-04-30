@@ -68,13 +68,13 @@ export default function Info() {
                 <fieldset><legend> <h2>What to Bring</h2> </legend></fieldset>
                 <div className="text-box">
                     <Suitcase className="symbol"/>
-                    <div>
+                    <div className={"formatted-list"}>
                         <dl>
                             <dt>Clothes</dt>
                             <dd>Zion is in the desert, which means it’s going to be hot during the day and
                                 cold at night. You should pack accordingly for both. For the actual ceremony,
                                 we’re not asking people to wear a suit into the Park, we’re just
-                                asking that you please dress nice, but comfortable, we want you to have
+                                asking that you please dress nice, but comfortable - we want you to have
                                 fun!</dd>
                             <dd>It would also be a good idea to bring swim clothes, hiking clothes if you plan
                                 on hiking in the park, and water shoes if you want to hike The Narrows.</dd>
@@ -87,7 +87,7 @@ export default function Info() {
                             <dt>Things To Do</dt>
                             <dd>Have a boardgame you like? A Viking lawn game where you toss wood blocks? An
                                 inflatable pool orca? Bring ‘em! We’re on the hook for damages done to the
-                                Villa though, so please just use your (or someone more responsible’s) better
+                                Villa though, so please use your (or someone more responsible’s) better
                                 judgement.</dd>
                         </dl>
                     </div>

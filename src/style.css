@@ -24,14 +24,11 @@ html {
     --h4: calc(var(--h5) * var(--font-scaling));
     --h5: calc(var(--font-master) * var(--font-scaling));
 
-    --hover-color: #C57C78;
-    --nav-and-foot: #495048;
-    --nav-and-foot-text: #DBBEB8;
-    --body-details: #727D6D;
-    --body-header: #727D6D;
-    --body-header-text: #fff;
-    --body-background: #fff;
-    --text: #495048;
+    --dark-pink: #C57C78;
+    --dark-green: #495048;
+    --light-pink: #DBBEB8;
+    --medium-green: #727D6D;
+    --background-white: #fff;
 
     --font-var: 'Poiret One';
     --font-var2: 'Lato';
@@ -39,8 +36,6 @@ html {
     --header-font: var(--font-var), cursive;
     --body-font: var(--font-var2), sans-serif;
 
-    /* images/zion-1.jpeg */
-    /* images/zion-2.webp */
     --img-url: url(images/zion-5.jpeg);
     --img-url2: url(images/jp-1.webp);
 
@@ -53,7 +48,7 @@ html {
 .background {
     padding: 0;
     margin: 0;
-    background-color: var(--nav-and-foot);
+    background-color: var(--dark-green);
 }
 
 h1 {
@@ -61,13 +56,13 @@ h1 {
     font-family: var(--header-font);
     font-weight: normal;
     text-align: center;
-    background-color: var(--body-header);
-    color: var(--body-header-text);
+    background-color: var(--medium-green);
+    color: var(--background-white);
     max-width: 800px;
     margin: 0 auto;
     position: sticky;
     position: -webkit-sticky;
-    top: 0px;
+    top: 0;
 }
 
 h2 {
@@ -96,7 +91,7 @@ h5 {
 }
 
 p {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
     font-size: var(--font-master);
     line-height: 1.5;
@@ -108,7 +103,7 @@ p {
 dt, dd{
     text-decoration: none;
     list-style-type: "🌷 ";
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
     font-size: var(--font-master);
 }
@@ -117,8 +112,8 @@ dt, dd{
 
 fieldset {
     border: none;
-    border-top: 2px solid var(--body-details);
-    color: var(--body-details);
+    border-top: 2px solid var(--medium-green);
+    color: var(--medium-green);
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
@@ -136,17 +131,17 @@ section {
 
 article {
     min-height: 600px;
-    background-color: var(--body-background);
+    background-color: var(--background-white);
     max-width: 800px;
     margin: 0 auto;
 }
 
 section {
-    background-color: var(--body-background);
+    background-color: var(--background-white);
 }
 
 .symbol {
-    fill: var(--body-details);
+    fill: var(--medium-green);
     width: 200px;
     padding: 1rem;
 }
@@ -160,26 +155,27 @@ section {
 .text-box p, p {
     margin: 0;
     padding: 1rem;
+    text-align: center;
 }
 
 button {
-    color: var(--body-background);
+    color: var(--background-white);
     font-family: var(--body-font);
-    background-color: var(--body-header);
+    background-color: var(--medium-green);
     border-style: solid;
 }
 
 a {
-    color: var(--nav-and-foot);
+    color: var(--dark-green);
     font-weight: bold;
 }
 
 a:hover {
-    color: var(--hover-color);
+    color: var(--dark-pink);
 }
 
 dl {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
     padding: 1em;
 }
@@ -188,20 +184,42 @@ button:disabled {
     background-color: lightgray;
 }
 
+.formatted-list dt {
+    text-decoration: underline;
+    font-size: var(--h5);
+    text-align: center;
+    margin-top: 1em;
+}
+
+.formatted-list dd {
+    text-align: center;
+    margin: 0;
+}
+
+.formatted-list dl {
+    padding: 0;
+}
+
+/* Location */
+
+.location .not-indented {
+    text-align: left;
+}
+
 /* RSVP */
 
 .RSVP input {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
 }
 
 .RSVP select {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
 }
 
 .RSVP textarea {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
 }
 
@@ -216,8 +234,8 @@ button:disabled {
 /* Info */
 
 .info button {
-    color: var(--text);
-    background-color: var(--body-background);
+    color: var(--dark-green);
+    background-color: var(--background-white);
     border: none;
     font-size: var(--h5);
     padding: 1em;
@@ -225,7 +243,7 @@ button:disabled {
 }
 
 .info .szh-accordion > div:not(:first-child) {
-    border-top: 1px solid var(--nav-and-foot);
+    border-top: 1px solid var(--dark-green);
 }
 
 .info .szh-accordion__item-content {
@@ -236,14 +254,14 @@ button:disabled {
 
 .login {
     text-align: center;
-    color: var(--text);
+    color: var(--dark-green);
 }
 
 .login h2 {
     font-size: var(--h5);
     font-family: var(--body-font);
     font-weight: normal;
-    color: var(--text);
+    color: var(--dark-green);
 }
 
 .login span {
@@ -251,7 +269,7 @@ button:disabled {
 }
 
 .login label {
-    color: var(--text);
+    color: var(--dark-green);
 }
 
 .login fieldset {
@@ -274,7 +292,7 @@ button:disabled {
     padding: 1em;
     list-style-type: none;
     text-align: center;
-    border: solid var(--nav-and-foot);
+    border: solid var(--dark-green);
 }
 
 .guest span{
@@ -335,7 +353,7 @@ header {
     border: none;
     margin: 0 auto;
     padding: 0;
-    background-color: var(--nav-and-foot);
+    background-color: var(--dark-green);
     max-width: 800px;
 }
 
@@ -346,8 +364,8 @@ header {
 }
 
 .main-menu {
-    border-top: 4px solid var(--nav-and-foot-text);
-    border-bottom: 1px solid var(--nav-and-foot-text);
+    border-top: 4px solid var(--light-pink);
+    border-bottom: 1px solid var(--light-pink);
     padding: 0.3rem 0;
     font-family: var(--header-font);
 }
@@ -366,7 +384,7 @@ header {
 
 .main-menu li a{
     text-decoration: none;
-    color: var(--nav-and-foot-text);
+    color: var(--light-pink);
     font-size: var(--h4);
     display: block;
     font-weight: var(--header-weight);
@@ -381,7 +399,7 @@ nav a:hover, a:focus {
 }
 
 nav button {
-    background-color: var(--nav-and-foot);
+    background-color: var(--dark-green);
     border: none;
     font-size: var(--h5);
 }
@@ -393,8 +411,8 @@ nav button {
     margin: 0 auto;
     text-align: center;
     max-width: 800px;
-    color: var(--nav-and-foot-text);
-    background-color: var(--nav-and-foot);
+    color: var(--light-pink);
+    background-color: var(--dark-green);
 }
 
 .custom-footer h3 {
@@ -427,11 +445,11 @@ nav button {
 
 .custom-footer a {
     text-decoration: none;
-    color: var(--nav-and-foot-text);
+    color: var(--light-pink);
 }
 
 .custom-footer a:hover {
-    color: var(--hover-color);
+    color: var(--dark-pink);
 }
 
 .custom-footer p {

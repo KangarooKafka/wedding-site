@@ -11,14 +11,15 @@ export default function Location() {
                 <div className="text-box">
                     <SignPost className="symbol"/>
                     <div>
-                        <p>Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a
-                            brilliant blue sky, while enjoying the lush green foliage and emerald pools
-                            created by the Virgin River. It’s no wonder that Zion ends up near the top of
-                            most lists of greatest National Parks.</p>
-                        <p>I can guarantee that the beauty of Zion will make an impression on you!</p>
-                        <p>In the park, there is a wide variety of hiking trails you can take, including
-                            Angel’s Landing, where you spend a portion of the hike strapped to the trail,
-                            and The Narrows, where you hike up a shallow river through a slot canyon.</p>
+                        <p>Zion National Park is a stunning natural wonder located in southwestern Utah,
+                            covering an area of over 229 square miles. The park is renowned for its breathtaking
+                            red rock canyons, towering cliffs, and dramatic landscapes.</p>
+                        <p>The park is home to a diverse range of ecosystems, from high-altitude forests to arid
+                            deserts, and boasts a wealth of wildlife, including bighorn sheep, mule deer, and coyotes.
+                            The park's centerpiece is Zion Canyon, which is up to half a mile deep and over 15 miles
+                            long. The canyon was carved by the Virgin River, which flows through the park, creating
+                            stunning rock formations, waterfalls, and hanging gardens.</p>
+                        <p>I had ChatGPT write that. But seriously though, the place is gorgeous!</p>
                     </div>
                 </div>
             </section>
@@ -27,18 +28,18 @@ export default function Location() {
                 <div className="text-box">
                     <Suitcase className="symbol"/>
                     <div>
-                        <p>The Villa is a 12,000 square foot, three story luxury estate situated on 15
-                            acres we have all to ourselves.</p>
-                        <p>Things to do at the Villa include:</p>
+                        <p>The Zion Red Rock Villa is a 12,000 square foot, three story luxury estate situated on 15
+                            private acres we will have all to ourselves!</p>
+                        <p className={"not-indented"}>Things to do at the Villa include, but are not limited to:</p>
                         <ul>
-                            <li>Two private lakes with kayaks and paddleboards</li>
+                            <li>Two private lakes with kayaks and stand-up paddle boards</li>
                             <li>Private beach access to the Virgin River</li>
                             <li>Private theater with luxury seats for 18 people and a luxury floor for everyone else</li>
                             <li>Heated pool and hot tub (heated pool Xtreme)</li>
                             <li>Sauna (if you want to experience hot water without being in a tub)</li>
-                            <li>Pickle ball courts</li>
-                            <li>Outdoor playground</li>
-                            <li>A wide range of TVs and tables for boardgames</li>
+                            <li>Pickle ball courts (very en vogue with adults right now)</li>
+                            <li>Outdoor playground (always en vogue with kids)</li>
+                            <li>Many TVs</li>
                         </ul>
                     </div>
                 </div>
@@ -48,20 +49,22 @@ export default function Location() {
                 <div className="text-box">
                     <Clipboard className="symbol"/>
                     <div>
-                        <p>Outside the Villa, there are plenty of other things to do!</p>
-                        <p>Nearby:</p>
+                        <p>In addition to things to do at the Villa itself, there's a host of things you can do in the
+                        immediate area, as well as further afield.</p>
+                        <p className={"not-indented"}>Things to do in the area:</p>
                         <ul>
                             <li>ATV rentals</li>
                             <li>Tubing down the Virgin River (lazy river style)</li>
-                            <li>Hiking Zion’s hiking trails</li>
-                            <li>Hiking up The Narrows</li>
+                            <li>Hiking Zion (we would especially suggest The Narrows)</li>
+                            <li>Horseback riding</li>
                         </ul>
-                        <p>Further:</p>
+                        <p className={"not-indented"}>Locations further afield:</p>
                         <ul>
                             <li>Bryce Canyon</li>
                             <li>Norther rim of the Grand Canyon</li>
                             <li>Kolb Canyon</li>
-                            <li>Hoover Damn</li>
+                            <li>Hoover Dam</li>
+                            <li>The town where "The Hangover" was filmed</li>
                         </ul>
                     </div>
                 </div>

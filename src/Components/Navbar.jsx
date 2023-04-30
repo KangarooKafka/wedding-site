@@ -22,20 +22,20 @@ export default function Navbar() {
         <header>
             <div className="row">
                 {JPHeader ? (
-                <img src={require("../images/headerDino.jpg")} alt="Kevin and Bailey sitting on a short wall with dinosaurs behind them"
+                    <img src={require("../images/dinoHeader.jpg")} alt="Kevin and Bailey sitting on a short wall with dinosaurs behind them"
                      className="header-pic" />
                     ) : (
-                    <img src={require("../images/B&K-10-smallest.jpg")} alt="Kevin and Bailey sitting on a short wall with flowers behind them"
+                    <img src={require("../images/header.jpg")} alt="Kevin and Bailey sitting on a short wall with flowers behind them"
                          className="header-pic" />
                     )}
             </div>
             <nav className="main-menu">
                 <ul>
-                    <li><Link to={'/RSVP'}>RSVP</Link></li>
-                    <li><Link to={'/Info'}>Info</Link></li>
-                    <li><Link to={'/Location'}>Location</Link></li>
                     <li><Link to={'/'}>Home</Link></li>
+                    <li><Link to={'/Info'}>Info</Link></li>
                     <li ><button onClick={toggleTheme}>🦖</button></li>
+                    <li><Link to={'/Location'}>Location</Link></li>
+                    <li><Link to={'/RSVP'}>RSVP</Link></li>
                 </ul>
             </nav>
         </header>
