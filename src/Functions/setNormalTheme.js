@@ -21,4 +21,5 @@ export default function setNormalTheme() {
 
     // Readjust font size
     root.style.setProperty('--font-scaling', '1.2')
+
 }
