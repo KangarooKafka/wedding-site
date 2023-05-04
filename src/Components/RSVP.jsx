@@ -1,4 +1,6 @@
 import { useState } from "react";
+import urlUtil from "../Common/utils/urlUtil";
+import emailjs from '@emailjs/browser';
 
 // Blank object for form data
 const formData = {
@@ -16,11 +18,22 @@ const formData = {
 
 // Makes API request to update the guest data
 async function updateGuest(id, form) {
-    return fetch(`/api/guest/${id}`, {
+    return fetch(`${urlUtil}/api/guest/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
     })
+}
+
+// Sends confirmation emails
+async function sendConfirmation(form) {
+    // Hey, get outa here Peter, Noonan, or Ian! Don't look at my keys, it's rude! I left them here out of sheer laziness and something something about 'use-case'
+    emailjs.sendForm('service_tcga8ya', 'template_w9zmef9', form, '7Zx6gmCsuXWw8oqbB')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
 }
 
 export default function RSVP() {
@@ -86,6 +99,9 @@ export default function RSVP() {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
+        // Send form data for confirmation email to be sent
+        await sendConfirmation(e.target)
+
         // Update local storage to show they've RSVPed
         localStorage.setItem('rsvped', 'true')
 
@@ -104,6 +120,9 @@ export default function RSVP() {
                 {rsvped === 'true' ? (
                 <div className={'rsvped-message'}>
                     <p>Thank you for RSVPing!</p>
+                    <p>When we have enough RSVPs to figure out lodging, we will reach out
+                    to you and let you know if there is space at the Villa or if you will
+                    need to be booking a hotel.</p>
                     <p>If you need to make a change, please <a href={'mailto:kevindarke@gmail.com'}>contact us directly</a>.</p>
                 </div>
                 ) : (
@@ -113,11 +132,11 @@ export default function RSVP() {
                                 <p>Will {personOne} be attending?</p>
                                 <select name={'pOneAttending'}>
                                     <option value={""}></option>
-                                    <option value={"true"}>Yes</option>
-                                    <option value={"false"}>No</option>
+                                    <option value={"will be attending"}>Yes</option>
+                                    <option value={"will NOT be attending"}>No</option>
                                 </select>
                             </label>
-                            {pOneAttend === 'true' &&
+                            {pOneAttend === 'will be attending' &&
                                 <label>
                                     <p>What is the best email address for {personOne}?</p>
                                     <input name={'pOneEmail'}/>
@@ -128,45 +147,45 @@ export default function RSVP() {
                                     <p>Will {personTwo} be attending?</p>
                                     <select name={'pTwoAttending'}>
                                         <option value={""}></option>
-                                        <option value={"true"}>Yes</option>
-                                        <option value={"false"}>No</option>
+                                        <option value={"will be attending"}>Yes</option>
+                                        <option value={"will NOT be attending"}>No</option>
                                     </select>
                                 </label>
                             }
-                            {pTwoAttend === 'true' &&
+                            {pTwoAttend === 'will be attending' &&
                                 <label>
                                     <p>What is the best email address for {personTwo}?</p>
                                     <input name={'pTwoEmail'}/>
                                 </label>
                             }
-                            {(pOneAttend === 'true' || pTwoAttend === 'true') && children.length > 0 &&
+                            {(pOneAttend === 'will be attending' || pTwoAttend === 'will be attending') && children.length > 0 &&
                                 <label>
                                     <p>Will {children} be attending?</p>
                                     <select name={'chAttending'}>
                                         <option value={""}></option>
-                                        <option value={"true"}>Yes</option>
-                                        <option value={"false"}>No</option>
+                                        <option value={"will be attending"}>Yes</option>
+                                        <option value={"will NOT be attending"}>No</option>
                                     </select>
                                 </label>
                             }
-                            {(pOneAttend === 'true' || pTwoAttend === 'true') &&
+                            {(pOneAttend === 'will be attending' || pTwoAttend === 'will be attending') &&
                                 <label>
                                     <p>Would you be interested in staying at the Villa?</p>
                                     <select name={'villaAttending'}>
                                         <option value={""}></option>
-                                        <option value={"true"}>Yes</option>
-                                        <option value={"false"}>No</option>
+                                        <option value={"yes"}>Yes</option>
+                                        <option value={"no"}>No</option>
                                     </select>
                                 </label>
                             }
-                            {(pOneAttend === 'true' || pTwoAttend === 'true') && villaAttend === 'true' &&
+                            {(pOneAttend === 'will be attending' || pTwoAttend === 'will be attending') && villaAttend === 'yes' &&
                                 <label>
                                     <p>Is there anyone you think is going who you would be okay sharing a multi-bed room
                                         with?</p>
                                     <textarea name={'sharing'}/>
                                 </label>
                             }
-                            {(pOneAttend === 'true' || pTwoAttend === 'true') &&
+                            {(pOneAttend === 'will be attending' || pTwoAttend === 'will be attending') &&
                                 <label>
                                     <p>Do you have any food restrictions?</p>
                                     <textarea name={'food'}/>
@@ -174,8 +193,12 @@ export default function RSVP() {
                             }
                             <label>
                                 <p>Are there any additional notes or messages you would like to add?</p>
+                                <p>(If you would be up for helping cook a meal, also please let us know!)</p>
                                 <textarea name={'notes'}/>
                             </label>
+                            <input type={"hidden"} name={'p1FirstName'} value={personOne}/>
+                            <input type={"hidden"} name={'p2FirstName'} value={personTwo}/>
+                            <input type={"hidden"} name={'children'} value={children}/>
                         </fieldset>
                         <button type={"submit"} disabled={!finished}>
                             Submit RSVP

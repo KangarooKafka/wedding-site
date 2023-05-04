@@ -1,67 +1,90 @@
-import {ReactComponent as SignPost} from "../images/signs-post-solid.svg";
-import {ReactComponent as Suitcase} from "../images/suitcase-solid.svg";
-import {ReactComponent as Clipboard} from "../images/clipboard-list-solid.svg";
+import {ReactComponent as Hiker} from "../SVGs/hiker.svg";
+import {ReactComponent as Mansion} from "../SVGs/mansion.svg";
+import {ReactComponent as Zion} from "../SVGs/zion.svg";
+import {ReactComponent as Dino5} from "../SVGs/dino-4.svg";
+import {ReactComponent as Dino6} from "../SVGs/dino-5.svg";
+import {ReactComponent as Dino7} from "../SVGs/dino-6.svg";
 
-export default function Location() {
+export default function Location(state) {
     return (
         <article className="location">
             <h1>The Location</h1>
             <section>
                 <fieldset><legend> <h2>Zion National Park</h2> </legend></fieldset>
                 <div className="text-box">
-                    <SignPost className="symbol"/>
+                    {state.SVGTheme ? (
+                        <Dino5 className="symbol"/>
+                    ) : (
+                        <Zion className="symbol"/>
+                    )}
                     <div>
-                        <p>Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a
-                            brilliant blue sky, while enjoying the lush green foliage and emerald pools
-                            created by the Virgin River. It’s no wonder that Zion ends up near the top of
-                            most lists of greatest National Parks.</p>
-                        <p>I can guarantee that the beauty of Zion will make an impression on you!</p>
-                        <p>In the park, there is a wide variety of hiking trails you can take, including
-                            Angel’s Landing, where you spend a portion of the hike strapped to the trail,
-                            and The Narrows, where you hike up a shallow river through a slot canyon.</p>
+                        <p>Zion National Park is a stunning natural wonder located in southwestern Utah,
+                            covering an area of over 229 square miles. The park is renowned for its breathtaking
+                            red rock canyons, towering cliffs, and dramatic landscapes.</p>
+                        <p>The park is home to a diverse range of ecosystems, from high-altitude forests to arid
+                            deserts, and boasts a wealth of wildlife, including bighorn sheep, mule deer, and coyotes.
+                            The park's centerpiece is Zion Canyon, which is up to half a mile deep and over 15 miles
+                            long. The canyon was carved by the Virgin River, which flows through the park, creating
+                            stunning rock formations, waterfalls, and hanging gardens.</p>
+                        <p>I had ChatGPT write that. But seriously though, the place is gorgeous!</p>
                     </div>
                 </div>
             </section>
             <section>
                 <fieldset><legend> <h2>The Villa</h2> </legend></fieldset>
                 <div className="text-box">
-                    <Suitcase className="symbol"/>
+                    {state.SVGTheme ? (
+                        <Dino6 className="symbol"/>
+                    ) : (
+                        <Mansion className="symbol"/>
+                    )}
                     <div>
-                        <p>The Villa is a 12,000 square foot, three story luxury estate situated on 15
-                            acres we have all to ourselves.</p>
-                        <p>Things to do at the Villa include:</p>
+                        <p>The Zion Red Rock Villa is a 12,000 square foot, three story luxury estate situated on 15
+                            private acres we will have all to ourselves!</p>
+                        <p className={"not-indented"}>Things to do at the Villa include, but are not limited to:</p>
                         <ul>
-                            <li>Two private lakes with kayaks and paddleboards</li>
-                            <li>Private beach access to the Virgin River</li>
-                            <li>Private theater with luxury seats for 18 people and a luxury floor for everyone else</li>
-                            <li>Heated pool and hot tub (heated pool Xtreme)</li>
-                            <li>Sauna (if you want to experience hot water without being in a tub)</li>
-                            <li>Pickle ball courts</li>
-                            <li>Outdoor playground</li>
-                            <li>A wide range of TVs and tables for boardgames</li>
+                            <li> Two private lakes with kayaks and stand-up paddle boards</li>
+                            <li> Private beach access to the Virgin River</li>
+                            <li> Private theater with luxury seats for 18 people and a luxury floor for everyone else</li>
+                            <li> Heated pool and hot tub (heated pool Xtreme)</li>
+                            <li> Sauna (if you want to experience hot water without being in a tub)</li>
+                            <li> Pickleball courts (very en vogue with adults right now)</li>
+                            <li> Outdoor playground (always en vogue with kids)</li>
+                            <li> Many tables for boardgames</li>
+                            <li> A piano, if you want to show people you know how to play a piano</li>
+                            <li> Many TVs</li>
                         </ul>
+                        <p>For more information, please check out &nbsp;
+                            <a target="_blank" href="https://www.zionredrock.com/zionredrockvilla">
+                                their website</a>.</p>
                     </div>
                 </div>
             </section>
             <section>
                 <fieldset><legend> <h2>Other Activities</h2> </legend></fieldset>
                 <div className="text-box">
-                    <Clipboard className="symbol"/>
+                    {state.SVGTheme ? (
+                        <Dino7 className="symbol"/>
+                    ) : (
+                        <Hiker className="symbol"/>
+                    )}
                     <div>
-                        <p>Outside the Villa, there are plenty of other things to do!</p>
-                        <p>Nearby:</p>
+                        <p>In addition to things to do at the Villa itself, there's a host of things you can do in the
+                        immediate area, as well as further afield.</p>
+                        <p className={"not-indented"}>Things to do in the area:</p>
                         <ul>
-                            <li>ATV rentals</li>
-                            <li>Tubing down the Virgin River (lazy river style)</li>
-                            <li>Hiking Zion’s hiking trails</li>
-                            <li>Hiking up The Narrows</li>
+                            <li> ATV rentals</li>
+                            <li> Tubing down the Virgin River (lazy river style)</li>
+                            <li> Hiking Zion (we would especially suggest The Narrows)</li>
+                            <li> Horseback riding</li>
                         </ul>
-                        <p>Further:</p>
+                        <p className={"not-indented"}>Locations further afield:</p>
                         <ul>
-                            <li>Bryce Canyon</li>
-                            <li>Norther rim of the Grand Canyon</li>
-                            <li>Kolb Canyon</li>
-                            <li>Hoover Damn</li>
+                            <li> Bryce Canyon</li>
+                            <li> Norther rim of the Grand Canyon</li>
+                            <li> Kolb Canyon</li>
+                            <li> Hoover Dam</li>
+                            <li> The town where "The Hangover" was filmed</li>
                         </ul>
                     </div>
                 </div>

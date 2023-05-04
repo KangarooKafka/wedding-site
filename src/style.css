@@ -8,38 +8,45 @@ html {
     box-sizing: inherit;
 }
 
+@font-face {
+    font-family: "JP";
+    src: local("JP-Font"), url(Fonts/jpFont.ttf) format("truetype");
+}
+
 /* Custom Properties */
 :root {
-    --font-master: 1.2rem;
+    /* Font Size Properties */
+    --font-master: 1.0rem;
     --font-scaling: 1.2;
+    --header-weight: bold;
     --h1: calc(var(--h2) * var(--font-scaling));
     --h2: calc(var(--h3) * var(--font-scaling));
     --h3: calc(var(--h4) * var(--font-scaling));
     --h4: calc(var(--h5) * var(--font-scaling));
     --h5: calc(var(--font-master) * var(--font-scaling));
 
-    --hover-color: #C57C78;
-    --nav-and-foot: #495048;
-    --nav-and-foot-text: #DBBEB8;
-    --body-details: #727D6D;
-    --body-header: #727D6D;
-    --body-header-text: #fff;
-    --body-background: #fff;
-    --text: #495048;
+    /* Color Properties */
+    --dark-pink: #C57C78;
+    --dark-green: #495048;
+    --light-pink: #DBBEB8;
+    --medium-green: #727D6D;
+    --background-white: #fff;
 
-    --font-var: 'Poiret One';
-    --font-var2: 'Lato';
+    /* Font Properties */
+    --header-var: 'Poiret One';
+    --body-var: 'Lato';
+    --header-font: var(--header-var), cursive;
+    --body-font: var(--body-var), sans-serif;
 
-    --header-font: var(--font-var), cursive;
-    --body-font: var(--font-var2), sans-serif;
+    /* Background Properties */
+    --zion-url: url(images/zion-5.jpeg);
+    --dino-url: url(images/jp-1.webp);
+    --background-image: var(--zion-url);
 
-    /* images/zion-1.jpeg */
-    /* images/zion-2.webp */
-    --img-url: url(images/zion-5.jpeg);
-    --img-url2: url(images/jp-1.webp);
-
-    --background-left: var(--img-url);
-    --background-right: var(--img-url);
+    /* Header SVG Properties */
+    --rose-svg-url: url(SVGs/bullet-rose.svg);
+    --dino-svg-url: url(SVGs/bullet-egg.svg);
+    --li-symbol: var(--rose-svg-url);
 
 }
 
@@ -47,7 +54,7 @@ html {
 .background {
     padding: 0;
     margin: 0;
-    background-color: #394008;
+    background-color: var(--dark-green);
 }
 
 h1 {
@@ -55,13 +62,13 @@ h1 {
     font-family: var(--header-font);
     font-weight: normal;
     text-align: center;
-    background-color: var(--body-header);
-    color: var(--body-header-text);
+    background-color: var(--medium-green);
+    color: var(--background-white);
     max-width: 800px;
     margin: 0 auto;
     position: sticky;
     position: -webkit-sticky;
-    top: 0px;
+    top: 0;
 }
 
 h2 {
@@ -90,29 +97,47 @@ h5 {
 }
 
 p {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
+    font-size: var(--font-master);
     line-height: 1.5;
 }
 
 .location li,
 .home li,
-.info li {
+.info li,
+dt, dd{
     text-decoration: none;
-    list-style-type: "🌷 ";
-    color: var(--text);
+    list-style-type: none;
+    color: var(--dark-green);
     font-family: var(--body-font);
+    font-size: var(--font-master);
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+.info li::before, .location li::before {
+    display: inline-flex;
+    content: '';
+    background-image: var(--li-symbol);
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
 }
 
 /* General Content Pages */
 
 fieldset {
     border: none;
-    border-top: 2px solid var(--body-details);
-    color: var(--body-details);
+    border-top: 2px solid var(--medium-green);
+    color: var(--medium-green);
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+}
+
+fieldset legend h2 {
+    font-weight: var(--header-weight);
 }
 
 section {
@@ -123,23 +148,24 @@ section {
 
 article {
     min-height: 600px;
-    background-color: var(--body-background);
+    background-color: var(--background-white);
     max-width: 800px;
     margin: 0 auto;
 }
 
-section:nth-child(even){
-    background-color: var(--body-background);
-}
-
-section:nth-child(odd){
-    background-color: var(--body-background);
+section {
+    background-color: var(--background-white);
 }
 
 .symbol {
-    fill: var(--body-details);
+    fill: var(--medium-green);
     width: 200px;
     padding: 1rem;
+    height: auto;
+}
+
+.symbol g {
+    fill: var(--medium-green);
 }
 
 .text-box {
@@ -151,47 +177,71 @@ section:nth-child(odd){
 .text-box p, p {
     margin: 0;
     padding: 1rem;
+    text-align: center;
 }
 
 button {
-    color: var(--body-background);
+    color: var(--background-white);
     font-family: var(--body-font);
-    background-color: var(--body-header);
+    background-color: var(--medium-green);
     border-style: solid;
 }
 
 a {
-    color: var(--nav-and-foot);
+    color: var(--dark-green);
     font-weight: bold;
 }
 
 a:hover {
-    color: var(--hover-color);
+    color: var(--dark-pink);
 }
 
 dl {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
+    padding: 1em;
 }
 
 button:disabled {
     background-color: lightgray;
 }
 
+.formatted-list dt {
+    text-decoration: underline;
+    font-size: var(--h5);
+    text-align: center;
+    margin-top: 1em;
+}
+
+.formatted-list dd {
+    text-align: center;
+    margin: 0;
+}
+
+.formatted-list dl {
+    padding: 0;
+}
+
+/* Location */
+
+.location .not-indented {
+    text-align: left;
+}
+
 /* RSVP */
 
 .RSVP input {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
 }
 
 .RSVP select {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
 }
 
 .RSVP textarea {
-    color: var(--text);
+    color: var(--dark-green);
     font-family: var(--body-font);
 }
 
@@ -203,18 +253,37 @@ button:disabled {
     text-align: center;
 }
 
+/* Info */
+
+.info button {
+    color: var(--dark-green);
+    background-color: var(--background-white);
+    border: none;
+    font-size: var(--h5);
+    padding: 1em;
+    text-align: left;
+}
+
+.info .szh-accordion > div:not(:first-child) {
+    border-top: 1px solid var(--dark-green);
+}
+
+.info .szh-accordion__item-content {
+    padding-left: 3em;
+}
+
 /* Login */
 
 .login {
     text-align: center;
-    color: var(--text);
+    color: var(--dark-green);
 }
 
 .login h2 {
     font-size: var(--h5);
     font-family: var(--body-font);
     font-weight: normal;
-    color: var(--text);
+    color: var(--dark-green);
 }
 
 .login span {
@@ -222,7 +291,7 @@ button:disabled {
 }
 
 .login label {
-    color: var(--text);
+    color: var(--dark-green);
 }
 
 .login fieldset {
@@ -245,7 +314,7 @@ button:disabled {
     padding: 1em;
     list-style-type: none;
     text-align: center;
-    border: solid var(--nav-and-foot);
+    border: solid var(--dark-green);
 }
 
 .guest span{
@@ -306,7 +375,7 @@ header {
     border: none;
     margin: 0 auto;
     padding: 0;
-    background-color: var(--nav-and-foot);
+    background-color: var(--dark-green);
     max-width: 800px;
 }
 
@@ -317,11 +386,10 @@ header {
 }
 
 .main-menu {
-    border-top: 4px solid var(--nav-and-foot-text);
-    border-bottom: 1px solid var(--nav-and-foot-text);
+    border-top: 4px solid var(--light-pink);
+    border-bottom: 1px solid var(--light-pink);
     padding: 0.3rem 0;
     font-family: var(--header-font);
-    font-weight: bold;
 }
 
 .main-menu ul {
@@ -334,55 +402,66 @@ header {
     justify-content: center;
     gap: 4%;
     list-style-type: none;
+    text-align: center;
 }
 
 .main-menu li a{
     text-decoration: none;
-    color: var(--nav-and-foot-text);
+    color: var(--light-pink);
     font-size: var(--h4);
     display: block;
+    font-weight: var(--header-weight);
 }
 
-nav li a:not(:last-child)::after {
-    content: " || ";
-}
-
-nav a:hover, a:focus {
-    color: #C57C78;
+nav a:hover, a:focus,
+nav .nav-symbol:focus, nav .nav-symbol:hover {
+    color: var(--dark-pink);
+    fill: var(--dark-pink);
 }
 
 nav button {
-    background-color: var(--nav-and-foot);
+    padding: 0;
+    margin: 0 auto;
+    background-color: var(--dark-green);
+    display: block;
     border: none;
-    font-size: var(--h5);
 }
 
+.nav-symbol {
+    fill: var(--light-pink);
+    width: 25px;
+    background-color: var(--dark-green);
+    padding: 0;
+    height: auto;
+    margin: 0;
+}
 
-/* Footer */
+    /* Footer */
 .custom-footer {
     padding: 2rem;
     margin: 0 auto;
     text-align: center;
     max-width: 800px;
-    color: var(--nav-and-foot-text);
-    background-color: var(--nav-and-foot);
+    color: var(--light-pink);
+    background-color: var(--dark-green);
 }
 
 .custom-footer h3 {
     padding: 0;
     margin: 0;
-    font-weight: normal;
+    font-weight: var(--header-weight);
 }
 
 .custom-footer h4 {
     padding: 0;
     margin: 0;
-    font-weight: normal;
+    font-weight: var(--header-weight);
 }
 
 .custom-footer h5 {
     padding: 0;
     margin: 0;
+    font-weight: var(--header-weight);
 }
 
 .custom-footer ul {
@@ -398,15 +477,24 @@ nav button {
 
 .custom-footer a {
     text-decoration: none;
-    color: var(--nav-and-foot-text);
+    color: var(--light-pink);
+    font-weight: var(--header-weight);
 }
 
 .custom-footer a:hover {
-    color: var(--hover-color);
+    color: var(--dark-pink);
 }
 
 .custom-footer p {
     padding: 0;
+}
+
+.foot-symbol {
+    fill: var(--light-pink);
+    width: 80px;
+    padding: 0;
+    height: auto;
+    margin: 0;
 }
 
 /* Tablet view */
@@ -421,17 +509,8 @@ nav button {
         flex-basis: 70%;
     }
 
-    .info section:nth-child(even) .symbol {
+    section:nth-child(odd) .symbol {
         order: 2;
-    }
-
-
-    /* Footer */
-    .custom-footer ul {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        gap: 10%
     }
 
 }
@@ -440,10 +519,22 @@ nav button {
 @media (min-width: 800px) {
     /* Background */
     .background {
-        background-image: var(--background-left), var(--background-right);
+        background-image: var(--background-image);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position: left, right;
+        background-position: center;
+    }
+
+    /* Footer */
+    .custom-footer ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 5%
+    }
+
+    .custom-footer li:nth-child(2) {
+        order: -2;
     }
 }

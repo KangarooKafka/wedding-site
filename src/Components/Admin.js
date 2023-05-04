@@ -1,11 +1,12 @@
 import {useEffect, useState} from "react";
 import GuestListing from "./GuestListing";
+import urlUtil from "../Common/utils/urlUtil";
 
 //http://localhost:4000/api/guest
 
 // Function to get all guests from API
 async function getAllGuests() {
-    return await fetch(`/api/guest`, {
+    return await fetch(`${urlUtil}/api/guest`, {
         method: 'GET'
     })
         .then(data => data.json())

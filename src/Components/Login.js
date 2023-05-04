@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import PropTypes from "prop-types";
 import setJPTheme from "../Functions/setJPTheme";
+import urlUtil from "../Common/utils/urlUtil";
 
 // Uses the username to get the guest info from the API
 async function getUserInfo(username) {
-    return fetch(`/api/guest/?username=${username}`, {
+    return fetch(`${urlUtil}/api/guest/?username=${username}`, {
         method: 'GET'
     })
         .then(data => data.json())
@@ -56,7 +57,6 @@ export default function Login({ setUser }) {
                     <label>
                         <p>Username:</p>
                         <input
-                            autoFocus
                             type="username"
                             value={username}
                             onChange={(e) => setUserName(e.target.value.toLowerCase())}

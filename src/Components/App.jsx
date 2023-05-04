@@ -6,12 +6,13 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import RSVP from "./RSVP";
 import Info from "./Info";
 import Location from "./Location";
-import Share from "./Share";
 import Login from "./Login";
 import useGuest from "../Functions/useGuest";
 import setJPTheme from "../Functions/setJPTheme";
 import Admin from "./Admin";
 import Manage from "./Manage";
+import ErrorBoundary from "./ErrorBoundary";
+import {useState} from "react";
 
 export default function App() {
     // Hook for username of guest
@@ -22,23 +23,25 @@ export default function App() {
         setJPTheme()
     }
 
+    const [SVGTheme, setSVGTheme] = useState(localStorage.getItem('stylePref') === 'jurassic-park');
+
     // If user is not already signed in, send them to the login screen and pass username hook
     if(!username) {
         return <Login setUser={setUsername} />
     }
 
     return (
-      <BrowserRouter>
+      <ErrorBoundary>
+        <BrowserRouter>
           <div className="background">
             <header>
-                <Navbar />
+                <Navbar setTheme={setSVGTheme} />
             </header>
             <Routes>
                 <Route path={'/RSVP'} element={<RSVP />} />
-                <Route path={'/'} element={<Home />} />
-                <Route path={'/Location'} element={<Location />} />
-                <Route path={'/Share'} element={<Share />} />
-                <Route path={'/Info'} element={<Info />} />
+                <Route path={'/'} element={<Home SVGTheme={SVGTheme}/>} />
+                <Route path={'/Location'} element={<Location SVGTheme={SVGTheme} />} />
+                <Route path={'/Info'} element={<Info SVGTheme={SVGTheme} />} />
                 <Route path={'/Admin/RSVPED'} element={<Admin />} />
                 <Route path={'/Admin/manage'} element={<Manage />} />
             </Routes>
@@ -46,6 +49,7 @@ export default function App() {
                 <Footer />
             </footer>
           </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </ErrorBoundary>
   );
 }
