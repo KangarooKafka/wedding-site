@@ -1,13 +1,24 @@
 export default function setJPTheme() {
+
+    // Get the root
     const root = document.querySelector(':root')
+
+    // Update style preference
     localStorage.setItem('stylePref', 'jurassic-park')
-    root.style.setProperty('--background-left', 'var(--img-url2)')
-    root.style.setProperty('--background-right', 'var(--img-url2)')
-    root.style.setProperty('--font-var', 'JP')
-    //root.style.setProperty('--font-var2', 'Pangolin')
-    root.style.setProperty('--font-var2', 'JP')
-    //root.style.setProperty('--font-master', '1.4rem')
-    //root.style.setProperty('--font-scaling', '1.1')
+
+    // Change background image
+    root.style.setProperty('--background-image', 'var(--dino-url)')
+
+    // Change bullet image
+    root.style.setProperty('--li-symbol', 'var(--dino-svg-url)')
+
+    // Change fonts
+    root.style.setProperty('--header-font', 'JP')
+    root.style.setProperty('--body-font', 'JP')
+
+    // Change header weight so font looks right
     root.style.setProperty('--header-weight', 'normal')
 
+    // Adjust font size scaling
+    root.style.setProperty('--font-scaling', '1.1')
 }

@@ -1,12 +1,16 @@
-import {ReactComponent as SignPost} from "../images/signs-post-solid.svg";
-import {ReactComponent as Suitcase} from "../images/suitcase-solid.svg";
-import {ReactComponent as Clipboard} from "../images/clipboard-list-solid.svg";
-import {ReactComponent as Question} from "../images/circle-question-solid.svg";
-import {ReactComponent as Gift} from "../images/gift-solid.svg";
+import {ReactComponent as Question} from "../SVGs/question.svg";
+import {ReactComponent as Gift} from "../SVGs/gift.svg";
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
+import {ReactComponent as Itinerary} from "../SVGs/itinerary.svg";
+import {ReactComponent as Destination} from "../SVGs/destination.svg";
+import {ReactComponent as Luggage} from "../SVGs/luggage.svg";
+import {ReactComponent as Dino8} from "../SVGs/dino-7.svg";
+import {ReactComponent as Dino9} from "../SVGs/dino-8.svg";
+import {ReactComponent as Dino10} from "../SVGs/dino-9.svg";
+import {ReactComponent as Dino11} from "../SVGs/dino-10.svg";
+import {ReactComponent as Dino12} from "../SVGs/dino-11.svg";
 
-
-export default function Info() {
+export default function Info(state) {
 
     return (
         <article className="info">
@@ -14,28 +18,33 @@ export default function Info() {
             <section>
                 <fieldset><legend> <h2>Itinerary</h2> </legend></fieldset>
                 <div className="text-box">
-                    <Clipboard className="symbol"/>
+                    {state.SVGTheme ? (
+                        <Dino8 className="symbol"/>
+                    ) : (
+                        <Itinerary className="symbol"/>
+                    )}
                     <div>
+                        <p>We'll have more details added here with time, but this is a general overview.</p>
                         <dl>
                             <dt>Thursday, May 30th</dt>
                             <dd><ul>
-                                <li>5:00 – Check-in time at the Villa, guests can start arriving</li>
+                                <li> 5:00 – Check-in time at the Villa, guests can start arriving</li>
                             </ul></dd>
                             <dt>Friday, May 31st</dt>
                             <dd><ul>
-                                <li>All Day – Free Play</li>
+                                <li> All Day – Free Play</li>
                             </ul></dd>
                             <dt>Saturday, June 1st</dt>
                             <dd><ul>
-                                <li>Wedding activities (we're still working on the exact schedule)</li>
+                                <li> Wedding activities</li>
                             </ul></dd>
                             <dt>Sunday, June 2nd</dt>
                             <dd><ul>
-                                <li>All Day – Free Play</li>
+                                <li> All Day – Free Play</li>
                             </ul></dd>
                             <dt>Monday, June 3rd</dt>
                             <dd><ul>
-                                <li>10:00 AM Check-out</li>
+                                <li> 10:00 AM Check-out</li>
                             </ul></dd>
                         </dl>
                     </div>
@@ -44,7 +53,11 @@ export default function Info() {
             <section>
                 <fieldset><legend> <h2>How to Get There</h2> </legend></fieldset>
                 <div className="text-box">
-                    <SignPost className="symbol"/>
+                    {state.SVGTheme ? (
+                        <Dino9 className="symbol"/>
+                    ) : (
+                        <Destination className="symbol"/>
+                    )}
                     <div>
                         <p>“The best destinations require a journey” – Let’s say that’s from Tolkien</p>
                         <p>Zion is definitely ‘off the beaten path’, it’s a river oasis tucked away in
@@ -53,7 +66,7 @@ export default function Info() {
                         <ul>
                             <li>Fly into Las Vegas</li>
                             <li>Rent a car (or split one with someone else who’s going)</li>
-                            <li><a href="https://www.google.com/maps/dir/Harry+Reid+International
+                            <li><a target="_blank" href="https://www.google.com/maps/dir/Harry+Reid+International
                             +Airport,+5757+Wayne+Newton+Blvd,+Las+Vegas,+NV+89119/Zion+Red+Rock+
                             Villa,+991+W+230+S,+Rockville,+UT+84763/@36.4020003,-114.9718179,8.32z
                             /data=!4m14!4m13!1m5!1m1!1s0x80c8c59f1f049c5d:0x471359241ec41e1e!2m2!
@@ -67,23 +80,22 @@ export default function Info() {
             <section>
                 <fieldset><legend> <h2>What to Bring</h2> </legend></fieldset>
                 <div className="text-box">
-                    <Suitcase className="symbol"/>
+                    {state.SVGTheme ? (
+                        <Dino10 className="symbol"/>
+                    ) : (
+                        <Luggage className="symbol"/>
+                    )}
                     <div className={"formatted-list"}>
                         <dl>
                             <dt>Clothes</dt>
                             <dd>Zion is in the desert, which means it’s going to be hot during the day and
-                                cold at night. You should pack accordingly for both. For the actual ceremony,
-                                we’re not asking people to wear a suit into the Park, we’re just
-                                asking that you please dress nice, but comfortable - we want you to have
-                                fun!</dd>
+                                cold at night, so you should pack accordingly for both.</dd>
                             <dd>It would also be a good idea to bring swim clothes, hiking clothes if you plan
                                 on hiking in the park, and water shoes if you want to hike The Narrows.</dd>
                             <dt>Food</dt>
-                            <dd>We’re going to do everything we can do make sure everyone is always fed, but
-                                to be honest, this is a lot of people to feed and we don’t have professional
-                                experience feeding a small army. In case there’s a meal where we didn’t get
-                                enough food, or if you don’t like what we’re having, it might not be a bad
-                                idea to bring some snacks you like.</dd>
+                            <dd>We’re going to do everything we can do make sure everyone is fed for the time
+                                we're there, but it might not be a bad idea to pick up some of your favorite
+                                snacks before you get there.</dd>
                             <dt>Things To Do</dt>
                             <dd>Have a boardgame you like? A Viking lawn game where you toss wood blocks? An
                                 inflatable pool orca? Bring ‘em! We’re on the hook for damages done to the
@@ -96,7 +108,11 @@ export default function Info() {
             <section>
                 <fieldset><legend> <h2>FAQ</h2> </legend></fieldset>
                 <div className="text-box">
-                    <Question className="symbol"/>
+                    {state.SVGTheme ? (
+                        <Dino11 className="symbol"/>
+                    ) : (
+                        <Question className="symbol"/>
+                    )}
                     <Accordion>
                         <AccordionItem header={"Is the villa actually in the park?"}>
                             <p>The villa is located about 5 minutes down river from the Park.</p>
@@ -105,7 +121,7 @@ export default function Info() {
                             <p>None, for a multitude of reasons, it's going to be a dry wedding.</p>
                         </AccordionItem>
                         <AccordionItem header={"Where will the ceremony be?"}>
-                            <p>It will be deep in the park, at the tTemple of Sinawava (not a temple, it's just a pretty spot on the river).</p>
+                            <p>It will be deep in the park, at the Temple of Sinawava (not a temple, it's just a pretty spot on the river).</p>
                         </AccordionItem>
                         <AccordionItem header={"How will we be getting to the ceremony?"}>
                             <p>We'll have to drive from the villa to the Park, then take a 30 minute shuttle into the Park to the ceremony location.</p>
@@ -147,6 +163,14 @@ export default function Info() {
                                 whatever meaning you give it. So just find what’s important to
                                 you and have fun!</p>
                         </AccordionItem>
+                        <AccordionItem header={"Are there stores or restaurants nearby?"}>
+                            <p>Yes, there's plenty of stores and restaurants nearby, as well as a Walmart and
+                                Costco less than an hour away.</p>
+                        </AccordionItem>
+                        <AccordionItem header={"Can I camp on the property?"}>
+                            <p>Unfortunately, no. No bounce houses either. I don't know why I connected
+                            those two things in my head, but regardless: no tents or inflatable castles.</p>
+                        </AccordionItem>
                         <AccordionItem header={"My question isn't listed here."}>
                             <p>Just ask us!</p>
                         </AccordionItem>
@@ -156,7 +180,11 @@ export default function Info() {
             <section>
                 <fieldset><legend> <h2>Registry</h2> </legend></fieldset>
                 <div className="text-box">
-                    <Gift className="symbol"/>
+                    {state.SVGTheme ? (
+                        <Dino12 className="symbol"/>
+                    ) : (
+                        <Gift className="symbol"/>
+                    )}
                     <div>
                         <p>Since we’re making you schlep all the way to Utah, we’re not expecting
                             you to also get us a gift. Your presence is the greatest gift.</p>

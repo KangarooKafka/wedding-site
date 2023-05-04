@@ -193,6 +193,7 @@ export default function RSVP() {
                             }
                             <label>
                                 <p>Are there any additional notes or messages you would like to add?</p>
+                                <p>(If you would be up for helping cook a meal, also please let us know!)</p>
                                 <textarea name={'notes'}/>
                             </label>
                             <input type={"hidden"} name={'p1FirstName'} value={personOne}/>
