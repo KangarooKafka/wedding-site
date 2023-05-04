@@ -57,7 +57,6 @@ export default function Login({ setUser }) {
                     <label>
                         <p>Username:</p>
                         <input
-                            autoFocus
                             type="username"
                             value={username}
                             onChange={(e) => setUserName(e.target.value.toLowerCase())}
