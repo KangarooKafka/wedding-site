@@ -29,10 +29,10 @@ export default function Navbar(setState) {
             <div className="row">
                 {JPHeader ? (
                     <img src={require("../images/dinoHeader.jpg")} alt="Kevin and Bailey sitting on a short wall with dinosaurs behind them"
-                     className="header-pic" />
+                     className="header-pic" aria-label={"Image of Bailey and Kevin in front of dinosaurs"}/>
                 ) : (
                     <img src={require("../images/header.jpg")} alt="Kevin and Bailey sitting on a short wall with flowers behind them"
-                         className="header-pic" />
+                         className="header-pic" aria-label={"Image of Bailey and Kevin in front of flowers"}/>
                 )}
             </div>
             <nav className="main-menu">
@@ -40,9 +40,9 @@ export default function Navbar(setState) {
                     <li><Link to={'/'}>Home</Link></li>
                     <li><Link to={'/Info'}>Info</Link></li>
                     {JPHeader ? (
-                        <li><button onClick={toggleTheme}><Rose className="nav-symbol"/></button></li>
+                        <li><button onClick={toggleTheme}><Rose className="nav-symbol" aria-label={"Image of rose"}/></button></li>
                     ) : (
-                        <li><button onClick={toggleTheme}><JP className="nav-symbol"/></button></li>
+                        <li><button onClick={toggleTheme}><JP className="nav-symbol" aria-label={"Image of dinosaur skull"}/></button></li>
                     )}
                     <li><Link to={'/Location'}>Location</Link></li>
                     <li><Link to={'/RSVP'}>RSVP</Link></li>

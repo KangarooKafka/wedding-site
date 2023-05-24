@@ -19,9 +19,9 @@ export default function Info(state) {
                 <fieldset><legend> <h2>Itinerary</h2> </legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino8 className="symbol"/>
+                        <Dino8 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Itinerary className="symbol"/>
+                        <Itinerary className="symbol" aria-label={"Image of list and clock"}/>
                     )}
                     <div>
                         <p>We'll have more details added here with time, but this is a general overview.</p>
@@ -54,9 +54,9 @@ export default function Info(state) {
                 <fieldset><legend> <h2>How to Get There</h2> </legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino9 className="symbol"/>
+                        <Dino9 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Destination className="symbol"/>
+                        <Destination className="symbol" aria-label={"Image of map with destination"} />
                     )}
                     <div>
                         <p>“The best destinations require a journey” – Let’s say that’s from Tolkien</p>
@@ -81,9 +81,9 @@ export default function Info(state) {
                 <fieldset><legend> <h2>What to Bring</h2> </legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino10 className="symbol"/>
+                        <Dino10 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Luggage className="symbol"/>
+                        <Luggage className="symbol" aria-label={"Image of luggage"}/>
                     )}
                     <div className={"formatted-list"}>
                         <dl>
@@ -109,9 +109,9 @@ export default function Info(state) {
                 <fieldset><legend> <h2>FAQ</h2> </legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino11 className="symbol"/>
+                        <Dino11 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Question className="symbol"/>
+                        <Question className="symbol" aria-label={"Image of question mark"}/>
                     )}
                     <Accordion>
                         <AccordionItem header={"Is the villa actually in the park?"}>
@@ -155,8 +155,8 @@ export default function Info(state) {
                         <AccordionItem header={"Will you need help?"}>
                             <p>Yes! This is a monumental task we've taken on, we're trying to plan
                                 a wedding and a sleep-away-camp for adults at the same time. We're
-                                definitely going to be asking for people to chip in and help with some
-                                things, especially with food.</p>
+                                definitely going to be asking for people to help out with things,
+                                especially with food.</p>
                         </AccordionItem>
                         <AccordionItem header={"What is the meaning of life?"}>
                             <p>The simplest answer is that life is meaningless, beyond
@@ -181,9 +181,9 @@ export default function Info(state) {
                 <fieldset><legend> <h2>Registry</h2> </legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino12 className="symbol"/>
+                        <Dino12 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Gift className="symbol"/>
+                        <Gift className="symbol" aria-label={"Image of gift"}/>
                     )}
                     <div>
                         <p>Since we’re making you schlep all the way to Utah, we’re not expecting

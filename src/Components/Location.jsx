@@ -13,9 +13,9 @@ export default function Location(state) {
                 <fieldset><legend> <h2>Zion National Park</h2> </legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino5 className="symbol"/>
+                        <Dino5 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Zion className="symbol"/>
+                        <Zion className="symbol" aria-label={"Image of Zion"}/>
                     )}
                     <div>
                         <p>Zion National Park is a stunning natural wonder located in southwestern Utah,
@@ -34,9 +34,9 @@ export default function Location(state) {
                 <fieldset><legend> <h2>The Villa</h2> </legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino6 className="symbol"/>
+                        <Dino6 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Mansion className="symbol"/>
+                        <Mansion className="symbol" aria-label={"Image of mansion"}/>
                     )}
                     <div>
                         <p>The Zion Red Rock Villa is a 12,000 square foot, three story luxury estate situated on 15
@@ -64,9 +64,9 @@ export default function Location(state) {
                 <fieldset><legend> <h2>Other Activities</h2> </legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino7 className="symbol"/>
+                        <Dino7 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Hiker className="symbol"/>
+                        <Hiker className="symbol" aria-label={"Image of hiker"}/>
                     )}
                     <div>
                         <p>In addition to things to do at the Villa itself, there's a host of things you can do in the
