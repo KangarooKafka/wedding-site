@@ -126,7 +126,7 @@ export default function RSVP() {
                     <p>If you need to make a change, please <a href={'mailto:kevindarke@gmail.com'}>contact us directly</a>.</p>
                 </div>
                 ) : (
-                    <form onSubmit={handleSubmit} onChange={handleChange}>
+                    <form onSubmit={handleSubmit} onChange={handleChange} aria-label={"RSVP Submission form"}>
                         <fieldset>
                             <label>
                                 <p>Will {personOne} be attending?</p>

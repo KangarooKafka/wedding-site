@@ -23,9 +23,9 @@ export default function Home(state) {
             <section>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino1 className="symbol"/>
+                        <Dino1 className="symbol" aria-label={"Image of Dilophosaurus"}/>
                     ) : (
-                        <Wedding className="symbol"/>
+                        <Wedding className="symbol" aria-label={"Image of two birds and a heart"}/>
                     )}
                     <div>
                         <p>Welcome to our wedding website! We are thrilled to have
@@ -35,8 +35,6 @@ export default function Home(state) {
                         friends, and we can't wait to create memories with you all that will last
                         a lifetime! We hope this website will be a helpful resource
                         for you as we prepare for our big day.</p>
-                        <p>PS, the website's theming options are best experienced
-                        on a desktop.</p>
                     </div>
                 </div>
             </section>
@@ -44,9 +42,9 @@ export default function Home(state) {
                 <fieldset><legend><h2>Why Zion?</h2></legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino2 className="symbol"/>
+                        <Dino2 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Zion className="symbol"/>
+                        <Zion className="symbol" aria-label={"Image of Zion"}/>
                     )}
                     <div>
                         <p>We know what you're thinking, "why in the blue blazes
@@ -65,9 +63,9 @@ export default function Home(state) {
                 <fieldset><legend><h2>The Plan</h2></legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino3 className="symbol"/>
+                        <Dino3 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Plan className="symbol"/>
+                        <Plan className="symbol" aria-label={"Image of checklist"}/>
                     )}
                     <div>
                         <p>We understand that traveling all the way out to Utah is
@@ -94,9 +92,9 @@ export default function Home(state) {
                 <fieldset><legend><h2>Costs</h2></legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
-                        <Dino4 className="symbol"/>
+                        <Dino4 className="symbol" aria-label={"Image of dinosaur"}/>
                     ) : (
-                        <Costs className="symbol"/>
+                        <Costs className="symbol" aria-label={"Image of money on fire"}/>
                     )}
                     <div>
                         <div className={"formatted-list"}>

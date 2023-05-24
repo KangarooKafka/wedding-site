@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className={"custom-footer"}>
             <h3>Bride and Groom Contact:</h3>
             <ul>
-                <li><Rings className="foot-symbol" /></li>
+                <li><Rings className="foot-symbol" aria-label={"Image of two rings entwined"}/></li>
                 <li>
                     <h4>Bailey James</h4>
                     <p><a href="tel:2402053017">240-205-3017</a><br /></p>
