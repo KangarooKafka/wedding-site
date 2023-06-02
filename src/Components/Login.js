@@ -50,8 +50,8 @@ export default function Login({ setUser }) {
     return (
         <div className="login">
             <h1>Log In</h1>
-            <h2>Please enter the username provided with your invite</h2>
-            <p><span>It can be for either you or your partner and is not case sensitive.</span></p>
+            <h2>Your username is your first initial + your last name</h2>
+            <p><span>For example, John Smith's username would be jsmith</span></p>
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <label>
@@ -64,14 +64,16 @@ export default function Login({ setUser }) {
                     </label>
                     {/* Display error message if username was wrong */}
                     { invalid &&
-                    <p>Invalid username</p>
+                    <p><span>Invalid username</span></p>
                     }
                 </fieldset>
                 <fieldset>
                     <label>
                         <p>What website theme would you like?</p>
-                        <input className={"radio"} type={"radio"} value={"traditional"} name={"theme"}/>Traditional
-                        <input className={"radio"} type={"radio"} value={"jurassic-park"} name={"theme"}/>Jurassic Park
+                        <ul>
+                        <li><input className={"radio"} type={"radio"} value={"traditional"} name={"theme"}/>Traditional</li>
+                        <li><input className={"radio"} type={"radio"} value={"jurassic-park"} name={"theme"}/>Jurassic Park</li>
+                        </ul>
                     </label>
                 </fieldset>
                 <button type="submit" disabled={!username.length > 0}>Login</button>

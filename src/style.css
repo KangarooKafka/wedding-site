@@ -296,6 +296,7 @@ textarea {
     font-family: var(--body-font);
     font-weight: normal;
     color: var(--dark-green);
+    margin-top: 20px;
 }
 
 .login span {
@@ -317,6 +318,12 @@ textarea {
 
 .login .radio{
     width: 12%;
+}
+
+.login ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 37%;
 }
 
 /* Admin */
