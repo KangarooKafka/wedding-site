@@ -27,7 +27,10 @@ async function updateGuest(id, form) {
 
 // Sends confirmation emails
 async function sendConfirmation(form) {
-    // Hey, get outa here Peter, Noonan, or Ian! Don't look at my keys, it's rude! I left them here out of sheer laziness and something something about 'use-case'
+    /** Hey, get outa here Peter, Noonan, or Ian! Don't look at my keys, it's rude!
+    If you must know, I left these here because I don't fully trust my work on the back end and wanted a way
+     to retain RSVP info using only the front end. That way if someone RSVPed and the back end was down, I'd
+    at least still get the email confirmation. **/
     emailjs.sendForm('service_tcga8ya', 'template_w9zmef9', form, '7Zx6gmCsuXWw8oqbB')
         .then((result) => {
             console.log(result.text);
