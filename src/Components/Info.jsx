@@ -24,7 +24,7 @@ export default function Info(state) {
                         <Itinerary className="symbol" aria-label={"Image of list and clock"}/>
                     )}
                     <div>
-                        <p>We'll have more details added here with time, but this is a general overview.</p>
+                        <p>We'll have more details added here soon, but this is a general overview.</p>
                         <dl>
                             <dt>Thursday, May 30th</dt>
                             <dd><ul>
@@ -36,7 +36,7 @@ export default function Info(state) {
                             </ul></dd>
                             <dt>Saturday, June 1st</dt>
                             <dd><ul>
-                                <li> Wedding activities</li>
+                                <li> Wedding ceremony</li>
                             </ul></dd>
                             <dt>Sunday, June 2nd</dt>
                             <dd><ul>
