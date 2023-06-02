@@ -50,7 +50,7 @@ export default function Login({ setUser }) {
     return (
         <div className="login">
             <h1>Log In</h1>
-            <h2>Please provide the username from your invite.</h2>
+            <h2>Please enter the username provided with your invite</h2>
             <p><span>It can be for either you or your partner and is not case sensitive.</span></p>
             <form onSubmit={handleSubmit}>
                 <fieldset>
@@ -70,8 +70,8 @@ export default function Login({ setUser }) {
                 <fieldset>
                     <label>
                         <p>What website theme would you like?</p>
-                        <input type={"radio"} value={"traditional"} name={"theme"}/>Traditional
-                        <input type={"radio"} value={"jurassic-park"} name={"theme"}/>Jurassic Park
+                        <input className={"radio"} type={"radio"} value={"traditional"} name={"theme"}/>Traditional
+                        <input className={"radio"} type={"radio"} value={"jurassic-park"} name={"theme"}/>Jurassic Park
                     </label>
                 </fieldset>
                 <button type="submit" disabled={!username.length > 0}>Login</button>
