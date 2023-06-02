@@ -39,6 +39,9 @@ let formData = {
 }
 
 export default function Manage() {
+    // Get user
+    const user = localStorage.getItem('username');
+
     // Guests hook
     const [guests, setGuests] = useState([]);
 
@@ -127,52 +130,56 @@ export default function Manage() {
     return (
         <article className="admin">
             <h1>Manage Guests</h1>
-            <form onChange={handleChange} onSubmit={handleSubmit}>
-                <fieldset>
-                    <div className={'add-header'}>
-                        <h2>Add A Guest</h2>
-                        {/* Timed message if new guest successfully added */}
-                        { success &&
-                            <p> New guest added!</p>
-                        }
-                    </div>
-                    <div className={'form-boxes'}>
-                        <label>
-                            <p>Username</p>
-                            <input name={'username'} />
-                        </label>
-                        <label>
-                            <p>Person One First Name:</p>
-                            <input name={'p1FirstName'}/>
-                        </label>
-                        <label>
-                            <p>Person One Last Name:</p>
-                            <input name={'p1LastName'}/>
-                        </label>
-                        <label>
-                            <p>Person Two First Name:</p>
-                            <input name={'p2FirstName'}/>
-                        </label>
-                        <label>
-                            <p>Person Two Last Name:</p>
-                            <input name={'p2LastName'}/>
-                        </label>
-                        <label>
-                            <p>Children:</p>
-                            <input name={'children'}/>
-                        </label>
-                    </div>
-                </fieldset>
-                <button disabled={!finished}>Add Guest</button>
-            </form>
-            <section>
-                <ul>
-                    {/* For each guest, add them to the list */}
-                    {guests.map(guest =>
-                        <li key={guest._id}><GuestListing guest={guest}/></li>
-                    )}
-                </ul>
-            </section>
+            {user === 'kd@rk3' &&
+                <div>
+                    <form onChange={handleChange} onSubmit={handleSubmit}>
+                        <fieldset>
+                            <div className={'add-header'}>
+                                <h2>Add A Guest</h2>
+                                {/* Timed message if new guest successfully added */}
+                                {success &&
+                                    <p> New guest added!</p>
+                                }
+                            </div>
+                            <div className={'form-boxes'}>
+                                <label>
+                                    <p>Username</p>
+                                    <input name={'username'}/>
+                                </label>
+                                <label>
+                                    <p>Person One First Name:</p>
+                                    <input name={'p1FirstName'}/>
+                                </label>
+                                <label>
+                                    <p>Person One Last Name:</p>
+                                    <input name={'p1LastName'}/>
+                                </label>
+                                <label>
+                                    <p>Person Two First Name:</p>
+                                    <input name={'p2FirstName'}/>
+                                </label>
+                                <label>
+                                    <p>Person Two Last Name:</p>
+                                    <input name={'p2LastName'}/>
+                                </label>
+                                <label>
+                                    <p>Children:</p>
+                                    <input name={'children'}/>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <button disabled={!finished}>Add Guest</button>
+                    </form>
+                    <section>
+                        <ul>
+                            {/* For each guest, add them to the list */}
+                            {guests.map(guest =>
+                                <li key={guest._id}><GuestListing guest={guest}/></li>
+                            )}
+                        </ul>
+                    </section>
+                </div>
+            }
         </article>
     )
 }

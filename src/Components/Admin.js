@@ -13,6 +13,9 @@ async function getAllGuests() {
 }
 
 export default function Admin() {
+    // Get user
+    const user = localStorage.getItem('username');
+
     // Hook to hold all guests
     const [guests, setGuests] = useState([]);
 
@@ -34,18 +37,20 @@ export default function Admin() {
     return (
         <article className="admin">
             <h1>View RSVPs</h1>
-            <section>
-                <ul>
-                    {/* For each guest, if they have RSVPed, add them to the list */}
-                    {guests.map(guest =>
-                        <>
-                        {guest.rsvped === 'true' &&
-                            <li key={guest._id}><GuestListing guest={guest}/></li>
-                        }
-                        </>
-                    )}
-                </ul>
-            </section>
+            {user === 'kd@rk3' &&
+                <section>
+                    <ul>
+                        {/* For each guest, if they have RSVPed, add them to the list */}
+                        {guests.map(guest =>
+                            <>
+                                {guest.rsvped === 'true' &&
+                                    <li key={guest._id}><GuestListing guest={guest}/></li>
+                                }
+                            </>
+                        )}
+                    </ul>
+                </section>
+            }
         </article>
     )
 }
