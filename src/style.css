@@ -185,6 +185,8 @@ button {
     font-family: var(--body-font);
     background-color: var(--medium-green);
     border-style: solid;
+    height: 30px;
+    width: 60px;
 }
 
 a {

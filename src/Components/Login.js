@@ -50,8 +50,8 @@ export default function Login({ setUser }) {
     return (
         <div className="login">
             <h1>Log In</h1>
-            <h2>Your username is your first initial + your last name</h2>
-            <p><span>For example, John Smith's username would be jsmith</span></p>
+            <h2>Your username is your first name + your last initial</h2>
+            <p><span>For example, Robert Muldoon's username would be robertm</span></p>
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <label>
@@ -78,6 +78,7 @@ export default function Login({ setUser }) {
                 </fieldset>
                 <button type="submit" disabled={!username.length > 0}>Login</button>
             </form>
+            <p><span>(If you have trouble logging in, please let me know: 810-845-0806)</span></p>
         </div>
     );
 }
