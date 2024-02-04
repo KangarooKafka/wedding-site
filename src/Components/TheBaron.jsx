@@ -162,7 +162,7 @@ export default function TheBaron() {
                                 {/* Timed messages */}
                                 {submitted && <p> Your answers have been submitted for processing. </p>}
                                 {thinking && <p> The Baron is checking your answers... </p>}
-                                {solved && <p> Congratulations!!! You've solved my enigma!!!</p>}
+                                {solved && <p> Congratulations!!! You've solved The Baron's enigma!!!</p>}
                                 {wrong && <p> Some, or all, of your submissions were incorrect. </p>}
                             </div>
                             <ul>

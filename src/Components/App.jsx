@@ -12,7 +12,9 @@ import setJPTheme from "../Functions/setJPTheme";
 import Admin from "./Admin";
 import Manage from "./Manage";
 import AddPuzzle from "./AddPuzzle";
+import ViewPuzzles from "./ViewPuzzles";
 import TheBaron from "./TheBaron";
+import ViewSubmissions from "./ViewSubmissions";
 import ErrorBoundary from "./ErrorBoundary";
 import {useState} from "react";
 
@@ -48,6 +50,8 @@ export default function App() {
                 <Route path={'/Admin/manage'} element={<Manage />} />
                 <Route path={'/Admin/add-puzzle'} element={<AddPuzzle />} />
                 <Route path={'/theBaron'} element={<TheBaron />} />
+                <Route path={'Admin/view-submissions'} element={<ViewSubmissions />} />
+                <Route path={'Admin/view-puzzles'} element={<ViewPuzzles />} />
             </Routes>
             <footer>
                 <Footer />

@@ -10,8 +10,25 @@ async function addPuzzle() {
     })
 }
 
+// Makes API call to add the new tracker
+async function addTracker() {
+    return fetch(`${urlUtil}/api/admin/status/delete-and-add`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(trackerFormData)
+    })
+}
+
 // Displays timed success message
 function successMessage(setSuccess) {
+    setSuccess(true)
+    setTimeout(() => {
+        setSuccess(false)
+    }, 2000)
+
+}
+
+function rewardSuccessMessage(setSuccess) {
     setSuccess(true)
     setTimeout(() => {
         setSuccess(false)
@@ -25,15 +42,22 @@ let formData = {
     answer: [],
 }
 
+// Blank tracker form to reset tracker
+let trackerFormData = {
+    reward: ""
+}
+
 export default function AddPuzzle() {
     // Get user
     const user = localStorage.getItem('username');
 
     // Hook for success message
     const [success, setSuccess] = useState(false);
+    const [rewardSuccess, setRewardSuccess] = useState(false);
 
     // Hook for completed form
     const [finished, setFinished] = useState(false)
+    const [rewardFinished, setRewardFinished] = useState(false)
 
     // Delegates form change and adds it to appropriate form field
     const handleChange = (e) => {
@@ -52,6 +76,22 @@ export default function AddPuzzle() {
         if (formData.label.length > 0 &&
             formData.answer.length > 0) {
             setFinished(true)
+        }
+    }
+
+    // Delegates form change and adds it to appropriate form field
+    const handleRewardChange = (e) => {
+        switch (e.target.name) {
+            case 'reward':
+                trackerFormData.reward = e.target.value;
+                break;
+            default:
+                break;
+        }
+
+        // Check if form is valid enough to be submitted
+        if (trackerFormData.reward.length > 0) {
+            setRewardFinished(true);
         }
     }
 
@@ -76,11 +116,49 @@ export default function AddPuzzle() {
         e.target.reset()
     }
 
+    // Handles submit by resetting the tracker data
+    const handleRewardSubmit = async (e) => {
+        e.preventDefault()
+
+        // Add puzzle to the API
+        await addTracker()
+
+        console.log(trackerFormData)
+
+        // Reset form data
+        trackerFormData = {
+            reward: ""
+        }
+
+        // Set success message, reset button and clear fields
+        rewardSuccessMessage(setRewardSuccess)
+        setRewardFinished(false)
+        e.target.reset()
+    }
+
     return (
         <article className="admin">
             <h1>Add Puzzles</h1>
             {user === 'kd@rk3' &&
                 <div>
+                    <form onChange={handleRewardChange} onSubmit={handleRewardSubmit}>
+                        <fieldset>
+                            <div className={'add-header'}>
+                                <h2>Reset final reward</h2>
+                                {/* Timed message if new puzzle successfully added */}
+                                {rewardSuccess &&
+                                    <p> Reward reset</p>
+                                }
+                            </div>
+                            <div className={'form-boxes'}>
+                                <label>
+                                    <p>Final Reward:</p>
+                                    <input name={'reward'}/>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <button disabled={!rewardFinished}>Submit</button>
+                    </form>
                     <form onChange={handleChange} onSubmit={handleSubmit}>
                         <fieldset>
                             <div className={'add-header'}>
