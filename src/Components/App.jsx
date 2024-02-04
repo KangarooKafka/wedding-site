@@ -11,6 +11,8 @@ import useGuest from "../Functions/useGuest";
 import setJPTheme from "../Functions/setJPTheme";
 import Admin from "./Admin";
 import Manage from "./Manage";
+import AddPuzzle from "./AddPuzzle";
+import TheBaron from "./TheBaron";
 import ErrorBoundary from "./ErrorBoundary";
 import {useState} from "react";
 
@@ -44,6 +46,8 @@ export default function App() {
                 <Route path={'/Info'} element={<Info SVGTheme={SVGTheme} />} />
                 <Route path={'/Admin/RSVPED'} element={<Admin />} />
                 <Route path={'/Admin/manage'} element={<Manage />} />
+                <Route path={'/Admin/add-puzzle'} element={<AddPuzzle />} />
+                <Route path={'/theBaron'} element={<TheBaron />} />
             </Routes>
             <footer>
                 <Footer />

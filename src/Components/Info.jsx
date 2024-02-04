@@ -40,7 +40,7 @@ export default function Info(state) {
                             </ul></dd>
                             <dt>Sunday, June 2nd</dt>
                             <dd><ul>
-                                <li> All Day – Free Play</li>
+                                <li> TEST!!!</li>
                             </ul></dd>
                             <dt>Monday, June 3rd</dt>
                             <dd><ul>
