@@ -36,7 +36,7 @@ export default function ViewSubmissions() {
     }, [])
 
     return (
-        <article className="guest-submissions">
+        <article className="view-submissions">
             <h1>View Guest Submissions</h1>
             {user === 'kd@rk3' &&
                 <section>

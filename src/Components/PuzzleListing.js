@@ -37,9 +37,15 @@ export default function PuzzleListing(puzzleListing) {
     return (
         <section className="puzzle">
             {puzzle.solved ? (
-                <p className="solved-puzzle">{puzzle.label}    "{puzzle.answer}"</p>
+                <div>
+                    <p className="solved-puzzle" >{puzzle.label}</p>
+                    <p>Solution: {puzzle.answer}</p>
+                </div>
             ) : (
-                <p className="unsolved-puzzle">{puzzle.label}  "{puzzle.answer}"</p>
+                <div>
+                    <p className="unsolved-puzzle" >{puzzle.label}</p>
+                    <p>Solution: {puzzle.answer}</p>
+                </div>
             )
             }
             {puzzle.solved ? (
@@ -49,7 +55,7 @@ export default function PuzzleListing(puzzleListing) {
                 <p>Puzzle first solved at: {puzzle.first_solved_date}</p>
                 <p>Eveyone who has solved the puzzle:</p>
                 <ul>
-                `{/* For each puzzle, list everyone who solved */}
+                {/* For each puzzle, list everyone who solved */}
                     {puzzle.everyone_who_solved.map(guest =>
                     <li key={guest}>
                         <p>{guest}</p>

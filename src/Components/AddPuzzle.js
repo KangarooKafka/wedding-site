@@ -137,7 +137,7 @@ export default function AddPuzzle() {
     }
 
     return (
-        <article className="admin">
+        <article className="add-puzzle">
             <h1>Add Puzzles</h1>
             {user === 'kd@rk3' &&
                 <div>

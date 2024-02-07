@@ -158,13 +158,6 @@ export default function TheBaron() {
                 </div>
                 <form onSubmit={handleSubmit} aria-label={"Enigma riddles"}>
                         <fieldset>
-                            <div className={'submission-header'}>
-                                {/* Timed messages */}
-                                {submitted && <p> Your answers have been submitted for processing. </p>}
-                                {thinking && <p> The Baron is checking your answers... </p>}
-                                {solved && <p> Congratulations!!! You've solved The Baron's enigma!!!</p>}
-                                {wrong && <p> Some, or all, of your submissions were incorrect. </p>}
-                            </div>
                             <ul>
                                 {/* For each guest, add them to the list */}
                                 {puzzles.map(puzzle =>
@@ -174,6 +167,13 @@ export default function TheBaron() {
                                     </li>
                                 )}
                             </ul>
+                            <div className={'submission-header'}>
+                                {/* Timed messages */}
+                                {submitted && <p> Your answers have been submitted for processing. </p>}
+                                {thinking && <p> The Baron is checking your answers... </p>}
+                                {solved && <p> Congratulations!!! You've solved The Baron's enigma!!!</p>}
+                                {wrong && <p> Some, or all, of your submissions were incorrect. </p>}
+                            </div>
                         </fieldset>
                     <button type={"submit"}>
                         Are these correct?

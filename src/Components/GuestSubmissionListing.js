@@ -18,9 +18,9 @@ export default function GuestSubmissionListing(guestListing) {
                 {guest.puzzle_answers.map(puzzle =>
                     <li key={puzzle._id}>
                         {puzzle.correct ? (
-                            <p className="correct-answer">{puzzle.label}    "{puzzle.entry}"</p>
+                            <p className="correct-answer">{puzzle.label}:    "{puzzle.entry}"</p>
                         ) : (
-                            <p className="incorrect-answer">{puzzle.label}  "{puzzle.entry}"</p>
+                            <p className="incorrect-answer">{puzzle.label}:  "{puzzle.entry}"</p>
                             )
                         }
                     </li>
