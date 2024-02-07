@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import urlUtil from "../Common/utils/urlUtil";
 
 // Makes API call to add a new puzzle

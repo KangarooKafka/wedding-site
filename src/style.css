@@ -308,14 +308,18 @@ textarea {
     margin-bottom: 1.5em;
 }
 
-/* View Puzzles */
-
-.view-puzzles h2 {
+.TheBaron .solved-header h2 {
+    padding-bottom: 0.5em;
+    text-align: center;
     color: var(--dark-green);
     margin-top: 0.5em;
     margin-left: 1em;
     margin-right: 1em;
-    text-align: center;
+}
+
+/* View Puzzles */
+
+.view-puzzles h2 {
 }
 
 .view-puzzles ul {
@@ -332,7 +336,11 @@ textarea {
 
 .view-puzzles h2 {
     padding-bottom: 0.5em;
-
+    text-align: center;
+    color: var(--dark-green);
+    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .view-puzzles button {

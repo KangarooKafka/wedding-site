@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
-import GuestListing from "./GuestListing";
 import urlUtil from "../Common/utils/urlUtil";
 import GuestSubmissionListing from "./GuestSubmissionListing";
+import PuzzleListing from "./PuzzleListing";
 
 //http://localhost:4000/api/guest
 
@@ -40,12 +40,16 @@ export default function ViewSubmissions() {
             <h1>View Guest Submissions</h1>
             {user === 'kd@rk3' &&
                 <section>
-                    <ul>
-                        {/* For each guest, Map their answers*/}
-                        {guests.map(guest =>
-                            <li key={guest._id}><GuestSubmissionListing guest={guest}/></li>
-                        )}
-                    </ul>
+                    {guests.length > 0 ? (
+                        <ul>
+                            {/* For each guest, Map their answers*/}
+                            {guests.map(guest =>
+                                <li key={guest._id}><GuestSubmissionListing guest={guest}/></li>
+                            )}
+                        </ul>
+                    ) : (
+                        <p>No guests found</p>
+                    )}
                 </section>
             }
         </article>

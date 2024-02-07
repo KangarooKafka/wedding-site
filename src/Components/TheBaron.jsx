@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import urlUtil from "../Common/utils/urlUtil";
+import GuestSubmissionListing from "./GuestSubmissionListing";
 
 // Blank object for form data
 let formData = {
@@ -158,15 +159,19 @@ export default function TheBaron() {
                 </div>
                 <form onSubmit={handleSubmit} aria-label={"Enigma riddles"}>
                         <fieldset>
-                            <ul>
-                                {/* For each guest, add them to the list */}
-                                {puzzles.map(puzzle =>
-                                    <li key={puzzle._id}>
-                                        <label>{puzzle.label}</label>
-                                        <input name={puzzle._id}/>
-                                    </li>
-                                )}
-                            </ul>
+                            {puzzles.length > 0 ? (
+                                <ul>
+                                    {/* For each guest, add them to the list */}
+                                    {puzzles.map(puzzle =>
+                                        <li key={puzzle._id}>
+                                            <label>{puzzle.label}</label>
+                                            <input name={puzzle._id}/>
+                                        </li>
+                                    )}
+                                </ul>
+                            ) : (
+                                <p>No puzzles found</p>
+                            )}
                             <div className={'submission-header'}>
                                 {/* Timed messages */}
                                 {submitted && <p> Your answers have been submitted for processing. </p>}

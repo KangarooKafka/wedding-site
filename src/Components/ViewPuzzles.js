@@ -68,12 +68,16 @@ export default function ViewPuzzles() {
                     ) : (
                             <h2>The Baron's Enigma has yet to be solved!</h2>
                     )}
-                    <ul>
-                        {/* For each puzzle, Map their contents*/}
-                        {puzzles.map(puzzle =>
-                            <li key={puzzle._id}><PuzzleListing puzzle={puzzle}/></li>
-                        )}
-                    </ul>
+                    {puzzles.length > 0 ? (
+                        <ul>
+                            {/* For each puzzle, Map their contents*/}
+                            {puzzles.map(puzzle =>
+                                <li key={puzzle._id}><PuzzleListing puzzle={puzzle}/></li>
+                            )}
+                        </ul>
+                    ) : (
+                        <p>No puzzles found</p>
+                    )}
                 </section>
             }
         </article>

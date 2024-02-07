@@ -13,19 +13,23 @@ export default function GuestSubmissionListing(guestListing) {
                 <h2>{guest.p1FirstName}</h2>
                 )
             }
-            <ul>
-                {/* For each guest, add them to the list */}
-                {guest.puzzle_answers.map(puzzle =>
-                    <li key={puzzle._id}>
-                        {puzzle.correct ? (
-                            <p className="correct-answer">{puzzle.label}:    "{puzzle.entry}"</p>
-                        ) : (
-                            <p className="incorrect-answer">{puzzle.label}:  "{puzzle.entry}"</p>
+            {guest.puzzle_answers.length > 0 ? (
+                <ul>
+                    {/* For each guest, add them to the list */}
+                    {guest.puzzle_answers.map(puzzle =>
+                        <li key={puzzle._id}>
+                            {puzzle.correct ? (
+                                <p className="correct-answer">{puzzle.label}:    "{puzzle.entry}"</p>
+                            ) : (
+                                <p className="incorrect-answer">{puzzle.label}:  "{puzzle.entry}"</p>
                             )
-                        }
-                    </li>
-                )}
-            </ul>
+                            }
+                        </li>
+                    )}
+                </ul>
+            ) : (
+                <p>No Puzzles found</p>
+            )}
         </section>
     )
 }
