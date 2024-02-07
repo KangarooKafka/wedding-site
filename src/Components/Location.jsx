@@ -26,7 +26,6 @@ export default function Location(state) {
                             The park's centerpiece is Zion Canyon, which is up to half a mile deep and over 15 miles
                             long. The canyon was carved by the Virgin River, which flows through the park, creating
                             stunning rock formations, waterfalls, and hanging gardens.</p>
-                        <p>I had ChatGPT write that. But seriously though, the place is gorgeous!</p>
                     </div>
                 </div>
             </section>

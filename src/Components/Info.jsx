@@ -9,6 +9,8 @@ import {ReactComponent as Dino9} from "../SVGs/dino-8.svg";
 import {ReactComponent as Dino10} from "../SVGs/dino-9.svg";
 import {ReactComponent as Dino11} from "../SVGs/dino-10.svg";
 import {ReactComponent as Dino12} from "../SVGs/dino-11.svg";
+import {ReactComponent as Dino3} from "../SVGs/dino-2.svg";
+import {ReactComponent as Plan} from "../SVGs/plan.svg";
 
 export default function Info(state) {
 
@@ -24,11 +26,11 @@ export default function Info(state) {
                         <Itinerary className="symbol" aria-label={"Image of list and clock"}/>
                     )}
                     <div>
-                        <p>We'll have more details added here soon, but this is a general overview.</p>
+                        <p>We're still nailing down some of these details, planning a wedding is hard</p>
                         <dl>
                             <dt>Thursday, May 30th</dt>
                             <dd><ul>
-                                <li> 5:00 – Check-in time at the Villa, guests can start arriving</li>
+                                <li> 5:00 – Check-in time at the Villa, guests can start arriving!</li>
                             </ul></dd>
                             <dt>Friday, May 31st</dt>
                             <dd><ul>
@@ -36,15 +38,60 @@ export default function Info(state) {
                             </ul></dd>
                             <dt>Saturday, June 1st</dt>
                             <dd><ul>
-                                <li> Wedding ceremony</li>
+                                <li> 11:00 AM - Wedding ceremony at The Villa</li>
+                                <li> 11:30 AM - Catered lunch at The Villa</li>
+                                <li> Bride and Groom will be going into the park to take pictures</li>
+                                <li> 7:00 PM - Reception and catered dinner at The Villa</li>
                             </ul></dd>
                             <dt>Sunday, June 2nd</dt>
                             <dd><ul>
-                                <li> TEST!!!</li>
+                                <li> All Day – Free Play</li>
                             </ul></dd>
                             <dt>Monday, June 3rd</dt>
                             <dd><ul>
                                 <li> 10:00 AM Check-out</li>
+                            </ul></dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <fieldset><legend><h2>Menu</h2></legend></fieldset>
+                <div className="text-box">
+                    {state.SVGTheme ? (
+                        <Dino3 className="symbol" aria-label={"Image of dinosaur"}/>
+                    ) : (
+                        <Plan className="symbol" aria-label={"Image of checklist"}/>
+                    )}
+                    <div>
+                        <p>PEOPLE!! PEOPLE ARE ON THE MENU!! SOYLENT GREEN IS PEOPLE!!</p>
+                        <dl>
+                            <dt>Thursday, May 30th</dt>
+                            <dd><ul>
+                                <li> Dinner- </li>
+                            </ul></dd>
+                            <dt>Friday, May 31st</dt>
+                            <dd><ul>
+                                <li> Breakfast- Pancakes, eggs, breakfast meats. A real smorgasbord of breakfast foods</li>
+                                <li> Lunch- Free roam eating, we'll have a lot of food in the house</li>
+                                <li> Dinner- BBQ (burgers, hot dogs, veggie dogs, vegetables (in non-dog form), etc.</li>
+                            </ul></dd>
+                            <dt>Saturday, June 1st</dt>
+                            <dd><ul>
+                                <li> Breakfast- Yogurt bar and continental breakfast</li>
+                                <li> Lunch- Catered lunch</li>
+                                <li> Dinner- Catered dinner</li>
+                            </ul></dd>
+                            <dt>Sunday, June 2nd</dt>
+                            <dd><ul>
+                                <li> Breakfast- breakfast smorgasbord part 2. We'll probably have learned a lot of lessons from
+                                    the last one and be a lot better at it this time.</li>
+                                <li> Lunch- Free roam eating, we'll have a lot of food in the house</li>
+                                <li> Dinner- TACOS</li>
+                            </ul></dd>
+                            <dt>Monday, June 3rd</dt>
+                            <dd><ul>
+                                <li> Breakfast- Continental breakfast</li>
                             </ul></dd>
                         </dl>
                     </div>
@@ -121,23 +168,7 @@ export default function Info(state) {
                             <p>None, for a multitude of reasons, it's going to be a dry wedding.</p>
                         </AccordionItem>
                         <AccordionItem header={"Where will the ceremony be?"}>
-                            <p>It will be deep in the park, at the Temple of Sinawava (not a temple, it's just a pretty spot on the river).</p>
-                        </AccordionItem>
-                        <AccordionItem header={"How will we be getting to the ceremony?"}>
-                            <p>We'll have to drive from the villa to the Park, then take a 30 minute shuttle into the Park to the ceremony location.</p>
-                        </AccordionItem>
-                        <AccordionItem header={"When will I know if there's space at the villa for me?"}>
-                            <p>Shrugging emoji. Hopefully soon.</p>
-                        </AccordionItem>
-                        <AccordionItem header={"Are the rooms all private?"}>
-                            <p>Many of the bedrooms have multiple beds, so some people may
-                                have to share rooms.</p>
-                        </AccordionItem>
-                        <AccordionItem header={"Will I have to share a room with someone I don't know?"}>
-                            <p>We're going to endeavor to make this as pleasant for everyone as possible.
-                                If you're a family, then definitely not. If you're going stag, then probably.
-                                We'll reach out to you and make sure you're happy with where we're placing you
-                                before anything is finalized.</p>
+                            <p>SLight change here, the ceremony is actually going to be at The Villa now</p>
                         </AccordionItem>
                         <AccordionItem header={"Do we need to pay for the villa?"}>
                             <p>If you want to chip in, that would be great, if not, that's completely fine!</p>

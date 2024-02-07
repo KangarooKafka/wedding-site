@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import urlUtil from "../Common/utils/urlUtil";
-import GuestSubmissionListing from "./GuestSubmissionListing";
 
 // Blank object for form data
 let formData = {
