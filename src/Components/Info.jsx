@@ -34,7 +34,8 @@ export default function Info(state) {
                             </ul></dd>
                             <dt>Friday, May 31st</dt>
                             <dd><ul>
-                                <li> All Day – Free Play</li>
+                                <li> 1:00 PM - 5:00 PM - We are tentatively planning for an (adult-friendly) bounce
+                                    house and 8-person wipe-out machine to be set up</li>
                             </ul></dd>
                             <dt>Saturday, June 1st</dt>
                             <dd><ul>
@@ -64,16 +65,15 @@ export default function Info(state) {
                         <Plan className="symbol" aria-label={"Image of checklist"}/>
                     )}
                     <div>
-                        <p>PEOPLE!! PEOPLE ARE ON THE MENU!! SOYLENT GREEN IS PEOPLE!!</p>
                         <dl>
                             <dt>Thursday, May 30th</dt>
                             <dd><ul>
-                                <li> Dinner- </li>
+                                <li> Dinner- TBD. We'll have a lot going on checking in, so eating before you get there is not the worst idea</li>
                             </ul></dd>
                             <dt>Friday, May 31st</dt>
                             <dd><ul>
-                                <li> Breakfast- Pancakes, eggs, breakfast meats. A real smorgasbord of breakfast foods</li>
-                                <li> Lunch- Free roam eating, we'll have a lot of food in the house</li>
+                                <li> Breakfast- Pancakes, eggs, breakfast meats, etc. A real smorgasbord of breakfast foods</li>
+                                <li> Lunch- No formal food plans, but lots of food in the house</li>
                                 <li> Dinner- BBQ (burgers, hot dogs, veggie dogs, vegetables (in non-dog form), etc.</li>
                             </ul></dd>
                             <dt>Saturday, June 1st</dt>
@@ -86,7 +86,7 @@ export default function Info(state) {
                             <dd><ul>
                                 <li> Breakfast- breakfast smorgasbord part 2. We'll probably have learned a lot of lessons from
                                     the last one and be a lot better at it this time.</li>
-                                <li> Lunch- Free roam eating, we'll have a lot of food in the house</li>
+                                <li> Lunch- No formal food plans, but lots of food in the house</li>
                                 <li> Dinner- TACOS</li>
                             </ul></dd>
                             <dt>Monday, June 3rd</dt>

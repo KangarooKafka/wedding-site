@@ -157,8 +157,10 @@ export default function TheBaron() {
                     }
                 </div>
                 <form onSubmit={handleSubmit} aria-label={"Enigma riddles"}>
-                        <fieldset>
-                            {puzzles.length > 0 ? (
+                    <fieldset>
+                        <p>The Baron wishes to inform you that he is now on Instagram: @TheFirstBaronOfReading</p>
+                        <p>The Baron also requests that your answers contain no commas</p>
+                        {puzzles.length > 0 ? (
                                 <ul>
                                     {/* For each guest, add them to the list */}
                                     {puzzles.map(puzzle =>
