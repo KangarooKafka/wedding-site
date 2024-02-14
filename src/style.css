@@ -103,6 +103,13 @@ p {
     line-height: 1.5;
 }
 
+label {
+    color: var(--dark-green);
+    font-family: var(--body-font);
+    font-size: var(--font-master);
+    line-height: 1.5;
+}
+
 .location li,
 .home li,
 .info li,
@@ -263,6 +270,179 @@ textarea {
 
 .rsvped-message p {
     text-align: center;
+}
+
+/* Enigma */
+
+.TheBaron input {
+    color: var(--dark-green);
+    font-family: var(--body-font);
+    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.TheBaron form {
+    text-align: center;
+    padding-bottom: 5px;
+
+}
+
+.TheBaron ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.TheBaron button {
+    margin-top: 1em;
+}
+
+.TheBaron .submission-header p {
+    margin: 0;
+    padding: 0;
+}
+
+.TheBaron li {
+    margin-bottom: 1.5em;
+}
+
+.TheBaron .solved-header h2 {
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: var(--dark-green);
+    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* View Puzzles */
+
+.view-puzzles h2 {
+}
+
+.view-puzzles ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.view-puzzles form {
+    text-align: center;
+    padding-bottom: 5px;
+
+}
+
+.view-puzzles h2 {
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: var(--dark-green);
+    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.view-puzzles button {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.view-puzzles li {
+    margin: 0;
+    padding: 0;
+}
+
+.view-puzzles section {
+    border-top: solid;
+    border-width: 1px;
+}
+
+.view-puzzles p {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+.view-puzzles p.unsolved-puzzle {
+    padding: 1em;
+    color: #C57C78;
+    text-decoration: underline;
+    font-size: var(--h5);
+}
+
+.view-puzzles p.solved-puzzle {
+    padding: 1em;
+    color: #495048;
+    font-size: var(--h5);
+}
+
+/* View Submissions */
+
+.view-submissions h2 {
+    color: var(--dark-green);
+    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: center;
+}
+
+.view-submissions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.view-submissions form {
+    text-align: center;
+    padding-bottom: 5px;
+
+}
+
+.view-submissions h2 {
+    padding-bottom: 0.5em;
+
+}
+
+.view-submissions .incorrect-answer {
+    color: #C57C78;
+}
+
+.view-submissions .correct-answer {
+    font-style: italic;
+}
+
+.view-submissions li {
+    margin: 0;
+    padding: 0;
+}
+
+.view-submissions section {
+    border-top: solid;
+    border-width: 1px;
+}
+
+.view-submissions p {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+/* Add Puzzle */
+
+.add-puzzle input {
+    color: var(--dark-green);
+    font-family: var(--body-font);
+    margin-top: 0.5em;
+}
+
+.add-puzzle form {
+    text-align: center;
+    padding-bottom: 5px;
+
+}
+
+.add-puzzle button {
+    margin-top: 1em;
+    margin-bottom: 3em;
 }
 
 /* Info */
@@ -548,6 +728,18 @@ nav li {
         width: 50%;
     }
 
+    .TheBaron label {
+
+    }
+
+    .TheBaron input {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    .TheBaron fieldset {
+
+    }
 }
 
 /* Desktop view */

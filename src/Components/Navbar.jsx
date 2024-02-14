@@ -45,7 +45,7 @@ export default function Navbar(setState) {
                         <li><button onClick={toggleTheme}><JP className="nav-symbol" aria-label={"Image of dinosaur skull"}/></button></li>
                     )}
                     <li><Link to={'/Location'}>Location</Link></li>
-                    <li><Link to={'/RSVP'}>RSVP</Link></li>
+                    <li><Link to={'/theBaron'}>Enigma</Link></li>
                 </ul>
             </nav>
         </header>

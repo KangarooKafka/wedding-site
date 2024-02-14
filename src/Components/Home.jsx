@@ -35,6 +35,8 @@ export default function Home(state) {
                         friends, and we can't wait to create memories with you all that will last
                         a lifetime! We hope this website will be a helpful resource
                         for you as we prepare for our big day.</p>
+                        <p>UPDATE: We have a wedding discord now, let us know if you'd like to be
+                            invited! It has a great dinosaur channel for discussing dinosaurs.</p>
                     </div>
                 </div>
             </section>
@@ -60,35 +62,6 @@ export default function Home(state) {
                 </div>
             </section>
             <section>
-                <fieldset><legend><h2>The Plan</h2></legend></fieldset>
-                <div className="text-box">
-                    {state.SVGTheme ? (
-                        <Dino3 className="symbol" aria-label={"Image of dinosaur"}/>
-                    ) : (
-                        <Plan className="symbol" aria-label={"Image of checklist"}/>
-                    )}
-                    <div>
-                        <p>We understand that traveling all the way out to Utah is
-                            a tall ask, so to make it worth the trip we've rented
-                            out a 12,000 square foot villa on 15 private acres for
-                            the 5 days around our wedding.</p>
-                        <p>The villa will serve as a space for us to hang out with our guests,
-                            and for many of you, a place to stay! Now unfortunately, we have
-                            slightly more people invited than beds available at the villa, so
-                            right now we cannot promise everyone a place to sleep there.</p>
-                        <p>That is why we're giving people the ability to RSVP early. If
-                            you know for sure that you will not be able to make the trek out, or
-                            are pretty confident you can make it work, please let us know by
-                            filling out the form on the RSVP tab.</p>
-                        <p>Once we have a better idea of who is coming, we can better plan
-                            logistics, as well as let people know if they will or will not need to
-                            book a hotel. Regardless if you'll have a bed at the villa though, you'll
-                            still be able to hang out there with everyone else and enjoy the amenities.
-                            So we would encourage everyone to please check out the Location page.</p>
-                    </div>
-                </div>
-            </section>
-            <section>
                 <fieldset><legend><h2>Costs</h2></legend></fieldset>
                 <div className="text-box">
                     {state.SVGTheme ? (
@@ -98,7 +71,7 @@ export default function Home(state) {
                     )}
                     <div>
                         <div className={"formatted-list"}>
-                            <p>It's hard to estimate prices this far out, but these
+                            <p>It's hard to estimate prices, but these
                                 are our best guesses so you have an idea of how much
                                 it might cost.</p>
                             <dl>
@@ -111,7 +84,8 @@ export default function Home(state) {
                                 <dt>Lodging</dt>
                                 <dd>It depends on how close you want to be and how nice of a place
                                     you want. You can get an AirBnB 30 minutes away for around $120 a night,
-                                    or a nice Hotel close by for $300+ a night.</dd>
+                                    or a nice Hotel close by for $300+ a night. We also have a block booked
+                                    at a nearby hotel for $169 a night. Let us know if you want that info.</dd>
                                 <dd>If you stay at the Villa, there is no set cost for you. It is very
                                     expensive for us however, so if you're staying at the Villa and feel
                                     financially comfortable enough to chip in to the cost, that would be
