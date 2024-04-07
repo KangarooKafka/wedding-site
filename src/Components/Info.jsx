@@ -68,11 +68,11 @@ export default function Info(state) {
                         <dl>
                             <dt>Thursday, May 30th</dt>
                             <dd><ul>
-                                <li> Dinner- TBD. We'll have a lot going on checking in, so eating before you get there is not the worst idea</li>
+                                <li> Dinner- We plan on having pizza delivered</li>
                             </ul></dd>
                             <dt>Friday, May 31st</dt>
                             <dd><ul>
-                                <li> Breakfast- Pancakes, eggs, breakfast meats, etc. A real smorgasbord of breakfast foods</li>
+                                <li> Breakfast- Yogurt bar and continental breakfast</li>
                                 <li> Lunch- No formal food plans, but lots of food in the house</li>
                                 <li> Dinner- BBQ (burgers, hot dogs, veggie dogs, vegetables (in non-dog form), etc.</li>
                             </ul></dd>
@@ -84,10 +84,9 @@ export default function Info(state) {
                             </ul></dd>
                             <dt>Sunday, June 2nd</dt>
                             <dd><ul>
-                                <li> Breakfast- breakfast smorgasbord part 2. We'll probably have learned a lot of lessons from
-                                    the last one and be a lot better at it this time.</li>
+                                <li> Breakfast- Yogurt bar and continental breakfast</li>
                                 <li> Lunch- No formal food plans, but lots of food in the house</li>
-                                <li> Dinner- TACOS</li>
+                                <li> Dinner- Ordering out</li>
                             </ul></dd>
                             <dt>Monday, June 3rd</dt>
                             <dd><ul>
@@ -161,6 +160,9 @@ export default function Info(state) {
                         <Question className="symbol" aria-label={"Image of question mark"}/>
                     )}
                     <Accordion>
+                        <AccordionItem header={"What should I wear at the ceremony?"}>
+                            <p>We're asking that people please try to wear one of our wedding colors: pink or green</p>
+                        </AccordionItem>
                         <AccordionItem header={"Is the villa actually in the park?"}>
                             <p>The villa is located about 5 minutes down river from the Park.</p>
                         </AccordionItem>
@@ -199,8 +201,10 @@ export default function Info(state) {
                                 Costco less than an hour away.</p>
                         </AccordionItem>
                         <AccordionItem header={"Can I camp on the property?"}>
-                            <p>Unfortunately, no. No bounce houses either. I don't know why I connected
-                            those two things in my head, but regardless: no tents or inflatable castles.</p>
+                            <p>Unfortunately, no.</p>
+                        </AccordionItem>
+                        <AccordionItem header={"How do I book in the hotel block?"}>
+                            <p><a target={"_blank"} href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1690518477368&key=GRP&app=resvlink">Here's the link!</a></p>
                         </AccordionItem>
                         <AccordionItem header={"My question isn't listed here."}>
                             <p>Just ask us!</p>
