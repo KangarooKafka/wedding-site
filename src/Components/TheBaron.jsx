@@ -158,7 +158,8 @@ export default function TheBaron() {
                 </div>
                 <form onSubmit={handleSubmit} aria-label={"Enigma riddles"}>
                     <fieldset>
-                        <p>The Baron wishes to inform you that he is now on Instagram: @TheFirstBaronOfReading</p>
+                        <p>The Baron wishes to inform you that he has <b>taken the wedding favors!</b> To get them back, his enigma must be solved!</p>
+                        <p>The keys to these riddles can be found on his Instagram: <a target="_blank" href="https://www.instagram.com/thefirstbaronofreading?igsh=MTM3NWhnYjJ3NnljYg%3D%3D&utm_source=qr">@TheFirstBaronOfReading</a></p>
                         <p>The Baron also requests that your answers contain no commas</p>
                         {puzzles.length > 0 ? (
                                 <ul>
