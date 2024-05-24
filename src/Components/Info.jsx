@@ -34,19 +34,23 @@ export default function Info(state) {
                             </ul></dd>
                             <dt>Friday, May 31st</dt>
                             <dd><ul>
-                                <li> 1:00 PM - 5:00 PM - We are tentatively planning for an (adult-friendly) bounce
+                                <li> 1:00 PM - 5:00 PM - (adult-friendly) bounce
                                     house and 8-person wipe-out machine to be set up</li>
                             </ul></dd>
                             <dt>Saturday, June 1st</dt>
                             <dd><ul>
-                                <li> 11:00 AM - Wedding ceremony at The Villa</li>
-                                <li> 11:30 AM - Catered lunch at The Villa</li>
-                                <li> Bride and Groom will be going into the park to take pictures</li>
-                                <li> 7:00 PM - Reception and catered dinner at The Villa</li>
+                                <li> 11:30 AM - Wedding ceremony at The Villa</li>
+                                <li> 12:00 PM - Catered lunch</li>
+                                <li> 12:00 PM - Human Whac-A-Mole machine is set up</li>
+                                <li> 1:00 PM - Bride and Groom go into the park to take pictures</li>
+                                <li> 5:00 PM - Human Whac-A-Mole machine and bounce house is taken down</li>
+                                <li> 6:00 PM - Reception, dinner, and dancing</li>
+                                <li> 10:00 PM - End of all dancing</li>
                             </ul></dd>
                             <dt>Sunday, June 2nd</dt>
                             <dd><ul>
-                                <li> All Day – Free Play</li>
+                                <li> Afternoon - Wedding competitions</li>
+                                <li> Evening - BBQ and Wedding Awards (pending trophy delivery)</li>
                             </ul></dd>
                             <dt>Monday, June 3rd</dt>
                             <dd><ul>
@@ -66,15 +70,11 @@ export default function Info(state) {
                     )}
                     <div>
                         <dl>
-                            <dt>Thursday, May 30th</dt>
-                            <dd><ul>
-                                <li> Dinner- We plan on having pizza delivered</li>
-                            </ul></dd>
                             <dt>Friday, May 31st</dt>
                             <dd><ul>
                                 <li> Breakfast- Yogurt bar and continental breakfast</li>
-                                <li> Lunch- No formal food plans, but lots of food in the house</li>
-                                <li> Dinner- BBQ (burgers, hot dogs, veggie dogs, vegetables (in non-dog form), etc.</li>
+                                <li> Lunch- Jimmy John's</li>
+                                <li> Dinner- Domino's</li>
                             </ul></dd>
                             <dt>Saturday, June 1st</dt>
                             <dd><ul>
@@ -85,8 +85,8 @@ export default function Info(state) {
                             <dt>Sunday, June 2nd</dt>
                             <dd><ul>
                                 <li> Breakfast- Yogurt bar and continental breakfast</li>
-                                <li> Lunch- No formal food plans, but lots of food in the house</li>
-                                <li> Dinner- Ordering out</li>
+                                <li> Lunch- Jimmy John's</li>
+                                <li> Dinner- Backyard BBQ</li>
                             </ul></dd>
                             <dt>Monday, June 3rd</dt>
                             <dd><ul>
